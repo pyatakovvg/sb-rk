@@ -1,0 +1,109 @@
+
+@import "~@ui.packages/themes";
+
+
+.wrapper {
+
+  display: inline-block;
+  text-align: center;
+  margin: 0 30px 120px;
+}
+
+.wrapper:hover .logo,
+.wrapper:hover .icon {
+
+  color: $information;
+  border-color: $information;
+}
+
+.logo {
+
+  display: inline-flex;
+  width: 90px;
+  height: 90px;
+  border: 3px solid $blue-grey-three;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  transition: border-color 400ms;
+}
+
+.icon {
+
+  font-size: 50px;
+  color: $blue-grey-three;
+  transition: color 400ms;
+}
+
+.title {
+
+  display: block;
+  font: 600 21px "Exo 2", sans-serif;
+  color: $coal-dark;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 30px 0 0;
+  letter-spacing: 2px;
+}
+
+.description {
+
+  display: block;
+  font: 15px "Exo 2", sans-serif;
+  color: $coal-dark;
+  margin: 20px 0 0;
+  text-align: justify;
+  line-height: 1.5;
+}
+
+.more {
+
+  display: block;
+  text-align: left;
+  margin: 30px 0 0;
+}
+
+.link {
+
+  font: 500 15px "Exo 2", sans-serif;
+  color: $primary;
+}
+
+@media screen and (max-width: 1280px) {
+
+  .wrapper {
+    margin: 0 30px 120px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+
+  .wrapper {
+    margin: 0 20px 80px;
+    text-align: left;
+  }
+
+  .logo {
+    vertical-align: middle;
+    width: 60px;
+    height: 60px;
+  }
+
+  .icon {
+    font-size: 30px;
+  }
+
+  .title {
+    display: inline-block;
+    margin: 0 0 0 20px;
+    vertical-align: middle;
+  }
+
+  .description {
+    margin: 30px 0 0;
+  }
+
+  .more {
+    text-align: right;
+  }
+}

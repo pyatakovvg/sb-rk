@@ -1,0 +1,93 @@
+
+@import "~@ui.packages/themes";
+
+@import "./reset.css";
+@import "./fonts/font-awesome/index.module";
+
+
+:global {
+
+  html,
+  body {
+
+    height: 100%;
+    background-color: $white;
+  }
+
+  #root {
+
+    display: flex;
+    flex-direction: column;
+    flex: 1 0;
+    height: 100%;
+    background-color: $dark-grey-blue;
+  }
+
+  b {
+    font-weight: 500;
+  }
+
+  .h3 {
+
+    display: block;
+    font: 500 22px "Exo 2", sans-serif;
+    color: $coal-dark;
+  }
+  .h3 + .p,
+  .h3 + .ul {
+
+    margin: 30px 0 0;
+  }
+
+  .a {
+
+    display: inline-block;
+    font: inherit;
+    color: $primary;
+  }
+
+  .p {
+
+    display: block;
+    font: 300 16px "Exo 2", sans-serif;
+    color: $coal-dark;
+    line-height: 1.5;
+  }
+
+  .p + .p {
+
+    margin: 20px 0 0;
+  }
+
+  .p + .h3 {
+    margin: 50px 0 0;
+  }
+  .p + .ul {
+    margin: 20px 0 0;
+  }
+
+  .ul {
+
+    display: block;
+    padding: 0 0 0 20px;
+  }
+  .ul + .p {
+    margin: 30px 0 0;
+  }
+
+  .li {
+
+    display: block;
+    font: 300 16px "Exo 2", sans-serif;
+    color: $coal-dark;
+  }
+  .li:before {
+    display: inline-block;
+    content: '-';
+    margin: 0 10px 0 0;
+  }
+  .li + .li {
+
+    margin: 10px 0 0;
+  }
+}
