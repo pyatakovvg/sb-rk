@@ -18,7 +18,7 @@ COPY ./yarn.lock                  .
 
 RUN yarn
 
-WORKDIR /app/apps/admin-ui
+WORKDIR /app/apps/site
 RUN ["yarn", "run", "build"]
 
 # START NGINX
