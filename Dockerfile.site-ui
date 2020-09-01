@@ -18,6 +18,9 @@ COPY ./yarn.lock                  .
 
 RUN yarn
 
+RUN cd ./apps/site
+RUN ls -l
+
 # START NGINX
 FROM nginx
 

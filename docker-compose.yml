@@ -9,7 +9,7 @@ services:
       dockerfile: Dockerfile.site-ui
     restart: always
     volumes:
-      - ./apps/showcase-ui/nginx/conf.d:/etc/nginx/conf.d:ro
+      - ./apps/site/nginx/conf.d:/etc/nginx/conf.d:ro
     environment:
       - NODE_ENV=production
 
