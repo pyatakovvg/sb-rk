@@ -1,15 +1,18 @@
 
 import React, { lazy, Suspense } from 'react';
 
+// import styles from './default.module.scss';
 
-const Page = lazy(() => import(/* webpackChunkName: "not-found-page-component" *//* webpackMode: "lazy" */'./Page'));
+
+const Partition = lazy(() => import(/* webpackChunkName: "partition" *//* webpackMode: "lazy" */'../../Layouts/Partition'));
 
 
-export default function NotFound() {
-
+export default function AboutPage() {
   return (
     <Suspense fallback={null}>
-      <Page />
+      <Partition title="Страница не найдена">
+
+      </Partition>
     </Suspense>
   );
 };

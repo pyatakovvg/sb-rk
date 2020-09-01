@@ -1,0 +1,28 @@
+
+# BUILD APP
+FROM node:13-alpine as ui
+
+RUN npm config set package-lock false
+#RUN npm i yarn -g --yes
+
+WORKDIR /app
+
+COPY ./apps/site-ui/src              ./apps/site-ui/src
+COPY ./apps/site-ui/public           ./apps/site-ui/public
+COPY ./apps/site-ui/package.json     ./apps/site-ui
+COPY ./apps/site-ui/.env.production  ./apps/site-ui
+COPY ./ui.packages                       ./ui.packages
+COPY ./package.json                      .
+COPY ./lerna.json                        .
+COPY ./yarn.lock                         .
+
+RUN yarn
+
+# START NGINX
+FROM nginx
+
+COPY --from=ui /app/apps/site-ui/build /app
+
+WORKDIR /etc/nginx
+
+CMD ["nginx", "-g", "daemon off;"]

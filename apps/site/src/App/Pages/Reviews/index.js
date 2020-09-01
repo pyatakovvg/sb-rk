@@ -1,15 +1,18 @@
 
 import React, { lazy, Suspense } from 'react';
 
+// import styles from './default.module.scss';
 
-const Page = lazy(() => import(/* webpackChunkName: "reviews-page-component" *//* webpackMode: "lazy" */'./Page'));
+
+const Partition = lazy(() => import(/* webpackChunkName: "partition" *//* webpackMode: "lazy" */'../../Layouts/Partition'));
 
 
-export default function Reviews() {
-
+export default function ReviewsPage() {
   return (
     <Suspense fallback={null}>
-      <Page />
+      <Partition title="Отзывы">
+
+      </Partition>
     </Suspense>
   );
 };
