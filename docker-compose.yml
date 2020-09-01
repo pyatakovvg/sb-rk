@@ -2,45 +2,16 @@
 version: "3.7"
 services:
 
-#  mail_srv:
-#    container_name: mail_srv
-#    build:
-#      context: ./
-#      dockerfile: Dockerfile.mail-srv
-#    restart: always
-
-#  showcase_gw:
-#    container_name: showcase_gw
-#    build:
-#      context: ./
-#      dockerfile: Dockerfile.showcase-gw
-#    restart: always
-#    depends_on:
-#      - rabbit
-#      - product_proxy
-#      - gallery_proxy
-#      - operation_proxy
-#      - identity_srv
-#    links:
-#      - rabbit
-#      - product_proxy
-#      - gallery_proxy
-#      - operation_proxy
-#      - identity_srv
-
   site_ui:
     container_name: site_ui
     build:
       context: ./
       dockerfile: Dockerfile.site-ui
     restart: always
-    depends_on:
-    links:
     volumes:
       - ./apps/showcase-ui/nginx/conf.d:/etc/nginx/conf.d:ro
     environment:
       - NODE_ENV=production
-
 
   certbot:
     user: root
