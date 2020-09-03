@@ -8,6 +8,9 @@
   flex-direction: row;
   flex: 1 0;
   flex-wrap: wrap;
+  margin: -120px 0 0;
+  overflow: hidden;
+  justify-content: space-between;
 }
 
 .col {
@@ -15,7 +18,10 @@
   display: flex;
   flex-direction: column;
   flex: 0 1 33%;
+  justify-content: center;
   align-items: center;
+  margin: 120px 0 0;
+
 }
 
 .picture {
@@ -24,10 +30,4 @@
   width: 300px;
   height: 200px;
   overflow: hidden;
-
-  & > img {
-
-    display: block;
-    width: 100%;
-  }
 }

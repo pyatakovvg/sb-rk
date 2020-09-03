@@ -2,43 +2,32 @@
 @import "~@ui.packages/themes";
 
 
-.wrapper {
+.row {
 
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex: 1 0;
+  flex-wrap: wrap;
+  margin: -120px 0 0;
+  overflow: hidden;
+  justify-content: space-between;
 }
 
-.header {
+.col {
 
   display: flex;
   flex-direction: column;
-  flex: 0 0 auto;
-  height: 340px;
-  background-color: $dark-grey-blue;
-  justify-content: flex-end;
-  padding: 0 40px 80px;
+  flex: 0 1 50%;
+  justify-content: center;
+  align-items: center;
+  margin: 120px 0 0;
+
 }
 
-.title {
-
-  display: inline-block;
-  font: 32px "Exo 2", sans-serif;
-  color: $white;
-  width: 1200px;
-  margin: 0 auto;
-}
-
-.content {
+.picture {
 
   display: block;
-  background: $white;
-  padding: 40px 0 120px;
-
-  &__block {
-
-    display: block;
-    margin: 0 auto;
-    width: 1200px
-  }
+  width: 500px;
+  height: 700px;
+  overflow: hidden;
 }
