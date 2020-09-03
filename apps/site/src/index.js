@@ -1,6 +1,4 @@
 
-import "@fortawesome/fontawesome-free";
-
 import ReactDOM from 'react-dom';
 import React, { lazy, Suspense } from 'react';
 
