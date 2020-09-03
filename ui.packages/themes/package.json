@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "name": "@ui.packages/themes",
+  "license": "MIT",
+  "version": "1.0.0",
+  "main": "./src/default.scss",
+  "author": {
+    "name": "Viktor Pyatakov",
+    "email": "viktor.pyatakov@pimpay.ru"
+  },
+  "files": [
+    "./src/default.scss"
+  ]
+}

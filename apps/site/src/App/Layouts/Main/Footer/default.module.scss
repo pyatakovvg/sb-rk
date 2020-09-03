@@ -1,0 +1,43 @@
+
+@import "~@ui.packages/themes";
+
+
+.wrapper {
+
+  display: block;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+
+.logotype {
+
+  display: block;
+  text-align: center;
+}
+
+.logo {
+
+  display: inline-block;
+  width: 200px;
+  height: 104px;
+  background: url("logotype.svg") center/100% no-repeat;
+}
+
+@media screen and (max-width: 1280px) {
+
+  .wrapper {
+    width: 100%;
+    padding: 0 30px;
+    box-sizing: border-box;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+
+  .wrapper {
+    width: 100%;
+    padding: 0 30px;
+    box-sizing: border-box;
+  }
+}

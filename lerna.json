@@ -1,0 +1,12 @@
+{
+  "lerna": "3.18.3",
+  "version": "independent",
+  "packages": [
+    "ui.packages/*",
+    "packages/*",
+    "apps/*"
+  ],
+  "npmClient": "yarn",
+  "useWorkspaces": true,
+  "command": {}
+}
