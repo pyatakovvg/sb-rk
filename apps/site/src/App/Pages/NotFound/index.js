@@ -1,5 +1,5 @@
 
-import React, { lazy, Suspense } from 'react';
+import React, { lazy, Suspense, useEffect } from 'react';
 
 // import styles from './default.module.scss';
 
@@ -8,6 +8,11 @@ const Partition = lazy(() => import(/* webpackChunkName: "partition" *//* webpac
 
 
 export default function AboutPage() {
+
+  useEffect(() => {
+    document.querySelector('#scroll').scroll(0, 0);
+  });
+
   return (
     <Suspense fallback={null}>
       <Partition title="Страница не найдена">

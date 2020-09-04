@@ -1,5 +1,7 @@
 
-import React, { lazy, Suspense } from 'react';
+import { BreadcrumbLink, Breadcrumbs, BreadcrumbTitle } from '@ui.packages/kit';
+
+import React, {lazy, Suspense, useEffect} from 'react';
 
 import styles from './default.module.scss';
 
@@ -8,12 +10,32 @@ const Partition = lazy(() => import(/* webpackChunkName: "partition" *//* webpac
 
 
 export default function LegalPage() {
+
+  useEffect(() => {
+    document.querySelector('#scroll').scroll(0, 0);
+  });
+
   return (
     <Suspense fallback={null}>
-      <Partition
-        title="Юридическое сопровождение"
-        className={styles['header']}
-      >
+      <Partition className={styles['background']}>
+        <div className={styles['header']}>
+          <div className={styles['breadcrumbs']}>
+            <Breadcrumbs>
+              <BreadcrumbLink title="Главная" href="/" />
+              <BreadcrumbTitle title="Услуги">
+                <BreadcrumbLink title="Бухгалтерское сопровождение" href="/services/bookkeeping" />
+                <BreadcrumbLink title="Юридическое сопровождение" href="/services/legal" />
+                <BreadcrumbLink title="Сопровождение по уголовным делам" href="/services/criminal" />
+                <BreadcrumbLink title="Кадровое сопровождение" href="/services/personnel" />
+                <BreadcrumbLink title="Независимая оценка и экспертиза" href="/services/expertise" />
+                <BreadcrumbLink title="Безопасность труда" href="/services/safety" />
+              </BreadcrumbTitle>
+              <BreadcrumbTitle title="Юридическое сопровождение" />
+            </Breadcrumbs>
+          </div>
+          <h2 className={styles['title']}>Юридическое сопровождение</h2>
+        </div>
+
         <p className="p">Любая фирма с момента открытия должна взаимодействовать с многочисленными государственными и частными организациями. Почти всегда эти взаимоотношения имеют юридическую и документальную основу.</p>
         <p className="p">Часто предприниматель оказывается лицом к лицу со сводом законов, кодексами, уставами и другими нормативно-правовыми актами. В работе потребуется не только их непосредственное знание, но и умение работать с ними: быстро находить нужные нормы, адекватно понимать их значение. Без грамотного юридического сопровождения бизнес ждут суды, штрафы, договорные разногласия, трения с работниками и прочие взыскания. В такой ситуации фирме необходим опытный юрист, способный своевременно и профессионально решать все вопросы.</p>
         <p className="p">Не все компании могут позволить себе содержать нужного специалиста в штате. Решить эту проблему поможет их юридическое обслуживание на основе аутсорсинга. Юристы «ШКОЛА БИЗНЕСА» специализируются на оказании таких услуг.</p>

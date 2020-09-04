@@ -22,8 +22,6 @@ function getDirection(img, container) {
   const imageRatio = getRation(img);
   const containerRatio = getRation(container);
 
-  console.log(imageRatio, containerRatio, !!img.src)
-
   if (imageRatio < containerRatio) {
     return LANDSCAPE_DIRECTION;
   }
@@ -66,19 +64,14 @@ function setCoverImageSize(img, container) {
 }
 
 
-export default function Image({ src, size }) {
+export default function Image({ className, src, size, isResize }) {
   const imageRef = useRef(null);
   const wrapperRef = useRef(null);
 
   const [isLoadingState, setLoadingState] = useState(true);
   const [isError, setError] = useState(false);
 
-  function handleError(err) {
-    setLoadingState(false);
-    setError(true);
-  }
-
-  function handleLoaded() {
+  function calculateProportions() {
     const { current: imageElement } = imageRef;
     const { current: wrapperElement } = wrapperRef;
 
@@ -86,27 +79,49 @@ export default function Image({ src, size }) {
       case COVER_SIZE: setCoverImageSize(imageElement, wrapperElement); break;
       default: setProportionalImageSize(imageElement, wrapperElement);
     }
+  }
 
+  function handleError() {
+    setError(true);
     setLoadingState(false);
+  }
+
+  function handleLoaded() {
+    calculateProportions();
+    setLoadingState(false);
+  }
+
+  function handleResize() {
+    calculateProportions();
   }
 
   useEffect(() => {
     const { current: imageElement } = imageRef;
 
+    if (isResize) {
+      window.addEventListener('resize', handleResize);
+    }
+
     imageElement.addEventListener('load', handleLoaded);
     imageElement.addEventListener('error', handleError);
+
     return () => {
+      if (isResize) {
+        window.removeEventListener('resize', handleResize);
+      }
+
       imageElement.removeEventListener('load', handleLoaded);
       imageElement.removeEventListener('error', handleError);
     };
   }, [src, size]);
 
+  const wrapperClassName = cn(styles['wrapper'], className);
   const imageClassName = cn(styles['image'], {
     [styles['image--visible']]: ! isLoadingState,
   });
 
   return (
-    <div className={styles['wrapper']}>
+    <div className={wrapperClassName}>
       <div ref={wrapperRef} className={imageClassName}>
         <img ref={imageRef} src={src} alt="" />
       </div>
@@ -125,11 +140,15 @@ export default function Image({ src, size }) {
 }
 
 Image.propTypes = {
+  className: types.string,
   src: types.string,
   size: types.oneOf([COVER_SIZE, null]),
+  isResize: types.bool,
 };
 
 Image.defaultProps = {
+  className: '',
   src: null,
   size: null,
+  isResize: false,
 };

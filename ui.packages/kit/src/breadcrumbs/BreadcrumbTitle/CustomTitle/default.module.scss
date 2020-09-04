@@ -1,0 +1,16 @@
+
+@import "~@ui.packages/themes";
+
+
+.item {
+
+  display: block;
+}
+
+.title {
+
+  display: block;
+  font: 500 16px "Exo 2", sans-serif;
+  color: $coal-dark;
+  white-space: nowrap;
+}

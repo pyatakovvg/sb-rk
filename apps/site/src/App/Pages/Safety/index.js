@@ -1,16 +1,41 @@
 
-import React, { lazy, Suspense } from 'react';
+import {BreadcrumbLink, Breadcrumbs, BreadcrumbTitle} from "@ui.packages/kit";
 
-// import styles from './default.module.scss';
+import React, { lazy, Suspense, useEffect } from 'react';
+
+import styles from './default.module.scss';
 
 
 const Partition = lazy(() => import(/* webpackChunkName: "partition" *//* webpackMode: "lazy" */'../../Layouts/Partition'));
 
 
 export default function SafetyPage() {
+
+  useEffect(() => {
+    document.querySelector('#scroll').scroll(0, 0);
+  });
+
   return (
     <Suspense fallback={null}>
-      <Partition title="Безопасность труда">
+      <Partition>
+        <div className={styles['header']}>
+          <div className={styles['breadcrumbs']}>
+            <Breadcrumbs>
+              <BreadcrumbLink title="Главная" href="/" />
+              <BreadcrumbTitle title="Услуги">
+                <BreadcrumbLink title="Бухгалтерское сопровождение" href="/services/bookkeeping" />
+                <BreadcrumbLink title="Юридическое сопровождение" href="/services/legal" />
+                <BreadcrumbLink title="Сопровождение по уголовным делам" href="/services/criminal" />
+                <BreadcrumbLink title="Кадровое сопровождение" href="/services/personnel" />
+                <BreadcrumbLink title="Независимая оценка и экспертиза" href="/services/expertise" />
+                <BreadcrumbLink title="Безопасность труда" href="/services/safety" />
+              </BreadcrumbTitle>
+              <BreadcrumbTitle title="Безопасность труда" />
+            </Breadcrumbs>
+          </div>
+          <h2 className={styles['title']}>Безопасность труда</h2>
+        </div>
+
         <p className="p"><b>Основные преимущества передачи обязанностей по безопасности на предприятии на аутсорсинг:</b></p>
 
         <ul className="ul">
