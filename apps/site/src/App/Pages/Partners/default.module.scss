@@ -2,6 +2,47 @@
 @import "~@ui.packages/themes";
 
 
+.breadcrumbs {
+
+  display: block;
+  margin: 30px 0 50px;
+}
+
+.header {
+
+  display: block;
+  text-align: center;
+  margin: 0 0 100px;
+}
+
+.title {
+
+  display: block;
+  font: 600 40px "Exo 2", sans-serif;
+  color: $coal-dark;
+  letter-spacing: .5px;
+  vertical-align: middle;
+  margin: 0 0 20px;
+
+  &:after,
+  &:before {
+
+    display: inline-block;
+    content: '';
+    width: 120px;
+    height: 3px;
+    background: $information;
+    vertical-align: middle;
+  }
+
+  &:after {
+    margin: 0 0 0 20px;
+  }
+  &:before {
+    margin: 0 20px 0 0;
+  }
+}
+
 .row {
 
   display: flex;
@@ -18,10 +59,19 @@
   display: flex;
   flex-direction: column;
   flex: 0 1 33%;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   margin: 120px 0 0;
+}
 
+.link {
+
+  display: block;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 .picture {
@@ -30,4 +80,43 @@
   width: 300px;
   height: 200px;
   overflow: hidden;
+
+  &__title {
+
+    display: block;
+    text-align: center;
+    font: 500 16px "Exo 2", sans-serif;
+    color: $coal-dark;
+    margin: 20px 0 0;
+    text-decoration: none;
+  }
+}
+
+
+
+@media screen and (max-width: 1280px) {
+
+  .col {
+    flex: 1 0 33%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+
+  .col {
+    flex: 1 0 50%;
+  }
+}
+
+@media screen and (max-width: 850px) {
+
+  .col {
+    flex: 1 0 100%;
+  }
+
+  .picture {
+
+    width: 500px;
+    height: 300px;
+  }
 }

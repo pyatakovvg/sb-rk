@@ -1,7 +1,7 @@
 
-import { Image } from '@ui.packages/kit';
+import { Image, Breadcrumbs, BreadcrumbTitle, BreadcrumbLink } from '@ui.packages/kit';
 
-import React, { lazy, Suspense } from 'react';
+import React, { lazy, Suspense, useEffect } from 'react';
 
 import img1 from './imgs/ab.jpg';
 import img2 from './imgs/Autopolka.jpg';
@@ -17,39 +17,69 @@ const Partition = lazy(() => import(/* webpackChunkName: "partition" *//* webpac
 
 
 export default function PartnersPage() {
+
+  useEffect(() => {
+    document.querySelector('#scroll').scroll(0, 0);
+  });
+
   return (
     <Suspense fallback={null}>
-      <Partition title="Наши партнеры">
+      <Partition>
+        <div className={styles['header']}>
+          <div className={styles['breadcrumbs']}>
+            <Breadcrumbs>
+              <BreadcrumbLink title="Главная" href="/" />
+              <BreadcrumbTitle title="Партнеры" />
+            </Breadcrumbs>
+          </div>
+          <h2 className={styles['title']}>Наши партнеры</h2>
+        </div>
         <div className={styles['row']}>
           <div className={styles['col']}>
             <div className={styles['picture']}>
               <Image src={img1} />
             </div>
+            <span className={styles['picture__title']}>Архитектурное Бюро</span>
           </div>
           <div className={styles['col']}>
-            <div className={styles['picture']}>
-              <Image src={img3} />
-            </div>
+            <a className={styles['link']} href="http://finds.su/" target="_blank" rel="noreferrer">
+              <div className={styles['picture']}>
+                <Image src={img3} />
+              </div>
+              <span className={styles['picture__title']}>Финансовый деловой союз</span>
+            </a>
           </div>
           <div className={styles['col']}>
-            <div className={styles['picture']}>
-              <Image src={img2} />
-            </div>
+            <a className={styles['link']} href="http://autopolka.ru/" target="_blank" rel="noreferrer">
+              <div className={styles['picture']}>
+                <Image src={img2} />
+              </div>
+              <span className={styles['picture__title']}>"Автополка" сеть магазинов</span>
+            </a>
           </div>
           <div className={styles['col']}>
-            <div className={styles['picture']}>
-              <Image src={img5} />
-            </div>
+            <a className={styles['link']} href="https://vk.com/ftbrk" target="_blank" rel="noreferrer">
+              <div className={styles['picture']}>
+                <Image src={img5} />
+              </div>
+              <span className={styles['picture__title']}>Спортивная федерация тайского<br/>бокса муйтай</span>
+            </a>
           </div>
           <div className={styles['col']}>
-            <div className={styles['picture']}>
-              <Image src={img4} />
-            </div>
+            <a className={styles['link']} href="https://pgsproekt.ru/" target="_blank" rel="noreferrer">
+              <div className={styles['picture']}>
+                <Image src={img4} />
+              </div>
+              <span className={styles['picture__title']}>«ПГС проект»</span>
+            </a>
           </div>
           <div className={styles['col']}>
-            <div className={styles['picture']}>
-              <Image src={img6} />
-            </div>
+            <a className={styles['link']} href="https://vk.com/garage_simf" target="_blank" rel="noreferrer">
+              <div className={styles['picture']}>
+                <Image src={img6} />
+              </div>
+              <span className={styles['picture__title']}>Барбершоп "ГАРАЖ"</span>
+            </a>
           </div>
         </div>
       </Partition>

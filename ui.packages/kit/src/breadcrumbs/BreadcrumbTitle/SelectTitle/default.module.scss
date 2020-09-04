@@ -1,0 +1,94 @@
+
+@import "~@ui.packages/themes";
+
+
+.item {
+
+  position: relative;
+  display: block;
+}
+
+.title {
+
+  display: block;
+  font: 500 16px "Exo 2", sans-serif;
+  color: $primary;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+
+  &:hover .arrow {
+
+    opacity: 1;
+  }
+}
+
+.arrow {
+
+  display: inline-block;
+  content: '';
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-top-color: $coal-dark;
+  border-bottom: none;
+  vertical-align: middle;
+  margin: 0 0 2px 6px;
+  opacity: .4;
+  transition: opacity 200ms;
+}
+
+.wrapper {
+
+  position: absolute;
+  top: 100%;
+  right: 50%;
+  padding: 10px 0 0;
+  margin: 0 -170px 0 0;
+}
+
+.list {
+
+  display: block;
+  width: 340px;
+  border: 1px solid $pale-lilac;
+  background: $white;
+  padding: 5px 0;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px 0 rgba($coal-dark, .2);
+
+  &__item {
+
+    display: block;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: background-color 200ms;
+
+    &:hover {
+
+      background-color: $pale-grey-three;
+    }
+
+    &--active,
+    &--active:hover {
+
+      background: $information;
+    }
+  }
+
+  &__link {
+
+    display: block;
+    padding: 10px 25px;
+    color: $coal-dark;
+    text-decoration: none;
+    text-align: left;
+    font: 300 16px "Exo 2", sans-serif;
+    white-space: nowrap;
+
+    &:hover {
+
+      text-decoration: none;
+    }
+  }
+}

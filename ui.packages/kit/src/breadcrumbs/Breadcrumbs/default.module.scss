@@ -1,0 +1,36 @@
+
+@import "~@ui.packages/themes";
+
+
+.wrapper {
+
+  display: inline-flex;
+  flex-direction: row;
+  flex: 1 0;
+  flex-wrap: nowrap;
+}
+
+.col {
+
+  display: inline-flex;
+  flex-direction: row;
+  flex: 1 0;
+  flex-wrap: nowrap;
+  align-items: center;
+
+  & + & {
+
+    margin: 0 0 0 10px;
+
+    &:before {
+
+      display: inline-block;
+      content: '';
+      width: 5px;
+      height: 5px;
+      background: $information;
+      margin: 0 10px 0 0;
+      border-radius: 50%;
+    }
+  }
+}

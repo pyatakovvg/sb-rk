@@ -1,7 +1,7 @@
 
-import { Image } from '@ui.packages/kit';
+import { BreadcrumbLink, Breadcrumbs, BreadcrumbTitle, Image } from '@ui.packages/kit';
 
-import React, { lazy, Suspense } from 'react';
+import React, { lazy, Suspense, useEffect } from 'react';
 
 import img1 from './imgs/pgs.jpg';
 import img2 from './imgs/ab.png';
@@ -15,9 +15,23 @@ const Partition = lazy(() => import(/* webpackChunkName: "partition" *//* webpac
 
 
 export default function ReviewsPage() {
+
+  useEffect(() => {
+    document.querySelector('#scroll').scroll(0, 0);
+  });
+
   return (
     <Suspense fallback={null}>
       <Partition title="Отзывы">
+        <div className={styles['header']}>
+          <div className={styles['breadcrumbs']}>
+            <Breadcrumbs>
+              <BreadcrumbLink title="Главная" href="/" />
+              <BreadcrumbTitle title="Отзывы" />
+            </Breadcrumbs>
+          </div>
+          <h2 className={styles['title']}>Отзывы клиентов</h2>
+        </div>
         <div className={styles['row']}>
           <div className={styles['col']}>
             <div className={styles['picture']}>

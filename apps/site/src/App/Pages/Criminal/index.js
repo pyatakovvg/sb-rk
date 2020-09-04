@@ -1,18 +1,41 @@
 
-import React, { lazy, Suspense } from 'react';
+import { BreadcrumbLink, Breadcrumbs, BreadcrumbTitle } from '@ui.packages/kit';
 
-// import styles from './default.module.scss';
+import React, { lazy, Suspense, useEffect } from 'react';
+
+import styles from './default.module.scss';
 
 
 const Partition = lazy(() => import(/* webpackChunkName: "partition" *//* webpackMode: "lazy" */'../../Layouts/Partition'));
 
 
 export default function CriminalPage() {
+
+  useEffect(() => {
+    document.querySelector('#scroll').scroll(0, 0);
+  });
+
   return (
     <Suspense fallback={null}>
-      <Partition
-        title="Сопровождение по уголовным делам"
-      >
+      <Partition>
+        <div className={styles['header']}>
+          <div className={styles['breadcrumbs']}>
+            <Breadcrumbs>
+              <BreadcrumbLink title="Главная" href="/" />
+              <BreadcrumbTitle title="Услуги">
+                <BreadcrumbLink title="Бухгалтерское сопровождение" href="/services/bookkeeping" />
+                <BreadcrumbLink title="Юридическое сопровождение" href="/services/legal" />
+                <BreadcrumbLink title="Сопровождение по уголовным делам" href="/services/criminal" />
+                <BreadcrumbLink title="Кадровое сопровождение" href="/services/personnel" />
+                <BreadcrumbLink title="Независимая оценка и экспертиза" href="/services/expertise" />
+                <BreadcrumbLink title="Безопасность труда" href="/services/safety" />
+              </BreadcrumbTitle>
+              <BreadcrumbTitle title="Сопровождение по уголовным делам" />
+            </Breadcrumbs>
+          </div>
+          <h2 className={styles['title']}>Сопровождение по уголовным делам</h2>
+        </div>
+
         <p className="p">Услуги по уголовным делам позволяют осуществить профессиональную защиту граждан от незаконных или необоснованных обвинений, неправомерного осуждения, ограничения их прав и свобод. Частым явлением стали ситуации, в которых подозреваемые считаются обвиняемыми до момента передачи дел в суды и самостоятельные попытки разрешения ситуаций могут не принести положительных результатов. Обладающие большим опытом работы адвокаты по уголовным ШКОЛЫ БИЗНЕСА, досконально изучат все представленные доказательства, привлекут в дело свидетелей, совершат любые закрепленные законодательством действия, необходимые для успеха Доверителя.</p>
 
         <h3 className="h3">Подробнее об услуге</h3>
