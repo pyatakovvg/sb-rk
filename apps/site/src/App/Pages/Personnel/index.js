@@ -11,7 +11,8 @@ const Partition = lazy(() => import(/* webpackChunkName: "partition" *//* webpac
 
 export default function PersonnelPage() {
 
-  useEffect(() => {
+  useEffect(function initPage() {
+    document.title = process.env['REACT_APP_WEBSITE_NAME'] + ' - Кадровое сопровождение';
     document.querySelector('#scroll').scroll(0, 0);
   });
 

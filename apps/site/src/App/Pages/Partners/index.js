@@ -18,7 +18,8 @@ const Partition = lazy(() => import(/* webpackChunkName: "partition" *//* webpac
 
 export default function PartnersPage() {
 
-  useEffect(() => {
+  useEffect(function initPage() {
+    document.title = process.env['REACT_APP_WEBSITE_NAME'] + ' - Партнеры';
     document.querySelector('#scroll').scroll(0, 0);
   });
 

@@ -11,13 +11,14 @@ const Partition = lazy(() => import(/* webpackChunkName: "partition" *//* webpac
 
 export default function CriminalPage() {
 
-  useEffect(() => {
+  useEffect(function initPage() {
+    document.title = process.env['REACT_APP_WEBSITE_NAME'] + ' - Сопровождение по уголовным делам'
     document.querySelector('#scroll').scroll(0, 0);
   });
 
   return (
     <Suspense fallback={null}>
-      <Partition>
+      <Partition className={styles['background']}>
         <div className={styles['header']}>
           <div className={styles['breadcrumbs']}>
             <Breadcrumbs>

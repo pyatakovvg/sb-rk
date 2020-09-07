@@ -11,7 +11,8 @@ const Partition = lazy(() => import(/* webpackChunkName: "partition" *//* webpac
 
 export default function BookkeepingPage() {
 
-  useEffect(() => {
+  useEffect(function initPage() {
+    document.title = process.env['REACT_APP_WEBSITE_NAME'] + ' - Бухгалтерское сопровождение'
     document.querySelector('#scroll').scroll(0, 0);
   });
 

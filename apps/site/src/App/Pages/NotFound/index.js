@@ -9,7 +9,8 @@ const Partition = lazy(() => import(/* webpackChunkName: "partition" *//* webpac
 
 export default function AboutPage() {
 
-  useEffect(() => {
+  useEffect(function initPage() {
+    document.title = process.env['REACT_APP_WEBSITE_NAME'] + ' - Страница не найдена';
     document.querySelector('#scroll').scroll(0, 0);
   });
 

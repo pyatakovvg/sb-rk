@@ -11,7 +11,8 @@ const Partition = lazy(() => import(/* webpackChunkName: "partition" *//* webpac
 
 export default function ContactsPage() {
 
-  useEffect(() => {
+  useEffect(function initPage() {
+    document.title = process.env['REACT_APP_WEBSITE_NAME'] + ' - Контакты'
     document.querySelector('#scroll').scroll(0, 0);
   });
 
