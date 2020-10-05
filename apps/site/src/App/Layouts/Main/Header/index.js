@@ -28,8 +28,12 @@ export default function Header() {
     };
   });
 
+  const wrapperClassName = cn(styles['wrapper'], {
+    [styles['wrapper--fixed']]: isOut,
+  });
+
   return (
-    <header ref={headerElement} className={styles['wrapper']}>
+    <header ref={headerElement} className={wrapperClassName}>
       <span className={styles['logo']} />
       <div className={styles['menu']}>
         <Suspense fallback={null}>

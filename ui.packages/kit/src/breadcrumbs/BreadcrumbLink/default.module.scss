@@ -5,7 +5,7 @@
 .item {
 
   display: block;
-  color: $primary;
+  color: rgba($primary, .5);
   text-decoration: none;
 
   &:hover {
