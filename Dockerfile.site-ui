@@ -21,6 +21,10 @@ RUN yarn
 WORKDIR /app/ui.packages/kit
 RUN ["yarn", "run", "build"]
 
+WORKDIR /app/ui.packages/contexts
+RUN ["yarn", "run", "build"]
+
+
 WORKDIR /app/apps/site
 RUN ["yarn", "run", "build"]
 
