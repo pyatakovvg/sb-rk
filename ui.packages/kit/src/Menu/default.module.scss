@@ -1,0 +1,17 @@
+
+@import "~@ui.packages/themes";
+
+
+.navigate {
+
+  display: inline-block;
+}
+
+@media screen and (max-width: 600px) {
+
+  .navigate {
+
+    display: flex;
+    flex-direction: column;
+  }
+}

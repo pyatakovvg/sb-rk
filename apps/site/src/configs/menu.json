@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Главная",
+    "href": "/"
+  },
+  {
+    "title": "Услуги",
+    "href": "/services",
+    "hasChildren": true
+  },
+  {
+    "title": "Партнеры",
+    "href": "/partners"
+  },
+  {
+    "title": "Отзывы",
+    "href": "/reviews"
+  },
+  {
+    "title": "Контакты",
+    "href": "/contacts"
+  },
+  {
+    "title": "О нас",
+    "href": "/about"
+  }
+]
