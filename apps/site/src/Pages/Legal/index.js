@@ -1,5 +1,5 @@
 
-import { BreadcrumbLink, Breadcrumbs, BreadcrumbTitle, PartitionLayout } from '@ui.packages/kit';
+import { BreadcrumbLink, Breadcrumbs, BreadcrumbTitle, PartitionLayout, Title } from '@ui.packages/kit';
 
 import React, { useEffect} from 'react';
 
@@ -10,7 +10,6 @@ export default function LegalPage() {
 
   useEffect(function initPage() {
     document.title = process.env['REACT_APP_WEBSITE_NAME'] + ' - Юридическое сопровождение'
-    document.querySelector('#scroll').scroll(0, 0);
   });
 
   return (
@@ -30,7 +29,7 @@ export default function LegalPage() {
             <BreadcrumbTitle title="Юридическое сопровождение" />
           </Breadcrumbs>
         </div>
-        <h2 className={styles['title']}>Юридическое сопровождение</h2>
+        <Title>Юридическое сопровождение</Title>
       </div>
 
       <p className="p">Любая фирма с момента открытия должна взаимодействовать с многочисленными государственными и частными организациями. Почти всегда эти взаимоотношения имеют юридическую и документальную основу.</p>

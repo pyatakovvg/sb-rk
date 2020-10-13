@@ -1,5 +1,5 @@
 
-import { BreadcrumbLink, Breadcrumbs, BreadcrumbTitle, PartitionLayout } from "@ui.packages/kit";
+import { BreadcrumbLink, Breadcrumbs, BreadcrumbTitle, PartitionLayout, Title } from "@ui.packages/kit";
 
 import React, { useEffect } from 'react';
 
@@ -10,7 +10,6 @@ export default function SafetyPage() {
 
   useEffect(function initPage() {
     document.title = process.env['REACT_APP_WEBSITE_NAME'] + ' - Безопасность труда';
-    document.querySelector('#scroll').scroll(0, 0);
   });
 
   return (
@@ -30,7 +29,7 @@ export default function SafetyPage() {
             <BreadcrumbTitle title="Безопасность труда" />
           </Breadcrumbs>
         </div>
-        <h2 className={styles['title']}>Безопасность труда</h2>
+        <Title>Безопасность труда</Title>
       </div>
 
       <div className={styles['content']}>

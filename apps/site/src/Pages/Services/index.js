@@ -1,5 +1,5 @@
 
-import { BreadcrumbLink, Breadcrumbs, BreadcrumbTitle, PartitionLayout } from "@ui.packages/kit";
+import { BreadcrumbLink, Breadcrumbs, BreadcrumbTitle, PartitionLayout, Title } from "@ui.packages/kit";
 
 import React, { lazy, Suspense, useEffect } from 'react';
 
@@ -13,7 +13,6 @@ export default function ServicesPage() {
 
   useEffect(function initPage() {
     document.title = process.env['REACT_APP_WEBSITE_NAME'] + ' - Услуги';
-    document.querySelector('#scroll').scroll(0, 0);
   });
 
   return (
@@ -25,7 +24,7 @@ export default function ServicesPage() {
             <BreadcrumbTitle title="Услуги" />
           </Breadcrumbs>
         </div>
-        <h2 className={styles['title']}>Наши услуги для Вас</h2>
+        <Title>Наши услуги для Вас</Title>
       </div>
       <Suspense fallback={null}>
         <div className={styles['services']}>

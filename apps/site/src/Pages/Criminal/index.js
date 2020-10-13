@@ -1,5 +1,5 @@
 
-import { BreadcrumbLink, Breadcrumbs, BreadcrumbTitle, PartitionLayout } from '@ui.packages/kit';
+import { BreadcrumbLink, Breadcrumbs, BreadcrumbTitle, PartitionLayout, Title } from '@ui.packages/kit';
 
 import React, { useEffect } from 'react';
 
@@ -10,7 +10,6 @@ export default function CriminalPage() {
 
   useEffect(function initPage() {
     document.title = process.env['REACT_APP_WEBSITE_NAME'] + ' - Сопровождение по уголовным делам'
-    document.querySelector('#scroll').scroll(0, 0);
   });
 
   return (
@@ -30,7 +29,7 @@ export default function CriminalPage() {
             <BreadcrumbTitle title="Сопровождение по уголовным делам" />
           </Breadcrumbs>
         </div>
-        <h2 className={styles['title']}>Сопровождение по уголовным делам</h2>
+        <Title>Сопровождение по уголовным делам</Title>
       </div>
 
       <p className="p">Услуги по уголовным делам позволяют осуществить профессиональную защиту граждан от незаконных или необоснованных обвинений, неправомерного осуждения, ограничения их прав и свобод. Частым явлением стали ситуации, в которых подозреваемые считаются обвиняемыми до момента передачи дел в суды и самостоятельные попытки разрешения ситуаций могут не принести положительных результатов. Обладающие большим опытом работы адвокаты по уголовным ШКОЛЫ БИЗНЕСА, досконально изучат все представленные доказательства, привлекут в дело свидетелей, совершат любые закрепленные законодательством действия, необходимые для успеха Доверителя.</p>

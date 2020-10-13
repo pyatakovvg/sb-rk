@@ -1,5 +1,5 @@
 
-import { BreadcrumbLink, Breadcrumbs, BreadcrumbTitle, PartitionLayout } from "@ui.packages/kit";
+import { BreadcrumbLink, Breadcrumbs, BreadcrumbTitle, PartitionLayout, Title } from "@ui.packages/kit";
 
 import React, { useEffect } from 'react';
 
@@ -10,7 +10,6 @@ export default function PersonnelPage() {
 
   useEffect(function initPage() {
     document.title = process.env['REACT_APP_WEBSITE_NAME'] + ' - Кадровое сопровождение';
-    document.querySelector('#scroll').scroll(0, 0);
   });
 
   return (
@@ -30,7 +29,7 @@ export default function PersonnelPage() {
             <BreadcrumbTitle title="Кадровое сопровождение" />
           </Breadcrumbs>
         </div>
-        <h2 className={styles['title']}>Кадровое сопровождение</h2>
+        <Title>Кадровое сопровождение</Title>
       </div>
 
       <h3 className="h3">Что включает в себя услуга кадрового консалтинга?</h3>

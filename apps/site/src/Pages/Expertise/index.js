@@ -1,5 +1,5 @@
 
-import { BreadcrumbLink, Breadcrumbs, BreadcrumbTitle, PartitionLayout } from '@ui.packages/kit';
+import { BreadcrumbLink, Breadcrumbs, BreadcrumbTitle, PartitionLayout, Title } from '@ui.packages/kit';
 
 import React, { useEffect } from 'react';
 
@@ -10,7 +10,6 @@ export default function ExpertisePage() {
 
   useEffect(function initPage() {
     document.title = process.env['REACT_APP_WEBSITE_NAME'] + ' - Назависимая оценка и экспертиза'
-    document.querySelector('#scroll').scroll(0, 0);
   });
 
   return (
@@ -30,7 +29,7 @@ export default function ExpertisePage() {
             <BreadcrumbTitle title="Независимая оценка и экспертиза" />
           </Breadcrumbs>
         </div>
-        <h2 className={styles['title']}>Независимая оценка и экспертиза</h2>
+        <Title>Независимая оценка и экспертиза</Title>
       </div>
 
       <p className="p"><b>Основные направления независимой оценки:</b></p>

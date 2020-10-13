@@ -1,5 +1,5 @@
 
-import { BreadcrumbLink, Breadcrumbs, BreadcrumbTitle, PartitionLayout } from '@ui.packages/kit';
+import { BreadcrumbLink, Breadcrumbs, BreadcrumbTitle, PartitionLayout, Title } from '@ui.packages/kit';
 
 import React, { useEffect } from 'react';
 
@@ -10,7 +10,6 @@ export default function ContactsPage() {
 
   useEffect(function initPage() {
     document.title = process.env['REACT_APP_WEBSITE_NAME'] + ' - Контакты'
-    document.querySelector('#scroll').scroll(0, 0);
   });
 
   return (
@@ -22,7 +21,7 @@ export default function ContactsPage() {
             <BreadcrumbTitle title="Контакты" />
           </Breadcrumbs>
         </div>
-        <h2 className={styles['title']}>Контакты</h2>
+        <Title>Контакты</Title>
       </div>
     </PartitionLayout>
   );

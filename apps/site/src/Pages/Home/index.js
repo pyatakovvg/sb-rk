@@ -13,7 +13,6 @@ export default function AboutPage() {
 
   useEffect(function initPage() {
     document.title = process.env['REACT_APP_WEBSITE_NAME'];
-    document.querySelector('#scroll').scroll(0, 0);
   });
 
   return (

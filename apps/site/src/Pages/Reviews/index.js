@@ -1,5 +1,5 @@
 
-import { BreadcrumbLink, Breadcrumbs, BreadcrumbTitle, Image, PartitionLayout } from '@ui.packages/kit';
+import { BreadcrumbLink, Breadcrumbs, BreadcrumbTitle, Image, PartitionLayout, Title } from '@ui.packages/kit';
 
 import React, { useEffect } from 'react';
 
@@ -15,7 +15,6 @@ export default function ReviewsPage() {
 
   useEffect(function initPage() {
     document.title = process.env['REACT_APP_WEBSITE_NAME'] + ' - Отзывы';
-    document.querySelector('#scroll').scroll(0, 0);
   });
 
   return (
@@ -27,7 +26,7 @@ export default function ReviewsPage() {
             <BreadcrumbTitle title="Отзывы" />
           </Breadcrumbs>
         </div>
-        <h2 className={styles['title']}>Отзывы клиентов</h2>
+        <Title>Отзывы клиентов</Title>
       </div>
       <div className={styles['row']}>
         <div className={styles['col']}>

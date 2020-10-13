@@ -1,5 +1,5 @@
 
-import { Image, Breadcrumbs, BreadcrumbTitle, BreadcrumbLink, PartitionLayout } from '@ui.packages/kit';
+import { Image, Breadcrumbs, BreadcrumbTitle, BreadcrumbLink, PartitionLayout, Title } from '@ui.packages/kit';
 
 import React, { useEffect } from 'react';
 
@@ -17,7 +17,6 @@ export default function PartnersPage() {
 
   useEffect(function initPage() {
     document.title = process.env['REACT_APP_WEBSITE_NAME'] + ' - Партнеры';
-    document.querySelector('#scroll').scroll(0, 0);
   });
 
   return (
@@ -29,7 +28,7 @@ export default function PartnersPage() {
             <BreadcrumbTitle title="Партнеры" />
           </Breadcrumbs>
         </div>
-        <h2 className={styles['title']}>Наши партнеры</h2>
+        <Title>Наши партнеры</Title>
       </div>
       <div className={styles['row']}>
         <div className={styles['col']}>

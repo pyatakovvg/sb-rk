@@ -13,24 +13,26 @@ export default function Footer() {
 
   return (
     <footer className={styles['wrapper']}>
-      <div className={styles['logotype']}>
-        <span className={styles['logo']} />
-      </div>
-      <div className={styles['information']}>
-        <div className={styles['address']}>
-          <Suspense fallback={null}>
-            <Address />
-          </Suspense>
+      <div className={styles['content']}>
+        <div className={styles['logotype']}>
+          <span className={styles['logo']} />
         </div>
-        <div className={styles['phone']}>
-          <Suspense fallback={null}>
-            <Phone />
-          </Suspense>
-        </div>
-        <div className={styles['email']}>
-          <Suspense fallback={null}>
-            <Email />
-          </Suspense>
+        <div className={styles['information']}>
+          <div className={styles['address']}>
+            <Suspense fallback={null}>
+              <Address />
+            </Suspense>
+          </div>
+          <div className={styles['phone']}>
+            <Suspense fallback={null}>
+              <Phone />
+            </Suspense>
+          </div>
+          <div className={styles['email']}>
+            <Suspense fallback={null}>
+              <Email />
+            </Suspense>
+          </div>
         </div>
       </div>
     </footer>

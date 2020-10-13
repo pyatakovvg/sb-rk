@@ -4,6 +4,7 @@ export { default as BreadcrumbLink } from './breadcrumbs/BreadcrumbLink';
 export { default as BreadcrumbTitle } from './breadcrumbs/BreadcrumbTitle';
 
 export { default as Image } from './symbols/Image';
+export { default as Title } from './symbols/Title';
 
 export { default as Menu } from './Menu';
 

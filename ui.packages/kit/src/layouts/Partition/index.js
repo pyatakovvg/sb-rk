@@ -1,15 +1,20 @@
 
-import React, { lazy, Suspense } from 'react';
+import React, {lazy, Suspense, useEffect} from 'react';
 
 import cn from 'classnames';
 import styles from './default.module.scss';
 
 
-const Header = lazy(() => import(/* webpackChunkName: "layout-header" *//* webpackMode: "lazy" */'./Header'));
+const Header = lazy(() => import(/* webpackChunkName: "layout-partition-header" *//* webpackMode: "lazy" */'./Header'));
 const Footer = lazy(() => import(/* webpackChunkName: "layout-footer" *//* webpackMode: "lazy" */'../Footer'));
 
 
 export default function Partition({ children }) {
+
+  useEffect(function initPage() {
+    document.querySelector('#scroll').scroll(0, 0);
+  });
+
   return (
     <article id="scroll" className={styles['wrapper']}>
       <div className={cn(styles['header'])}>

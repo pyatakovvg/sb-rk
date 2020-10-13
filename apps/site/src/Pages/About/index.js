@@ -1,5 +1,5 @@
 
-import { BreadcrumbLink, Breadcrumbs, BreadcrumbTitle, PartitionLayout } from '@ui.packages/kit';
+import { BreadcrumbLink, Breadcrumbs, BreadcrumbTitle, PartitionLayout, Title } from '@ui.packages/kit';
 
 import React, { useEffect } from 'react';
 
@@ -10,7 +10,6 @@ export default function AboutPage() {
 
   useEffect(function initPage() {
     document.title = process.env['REACT_APP_WEBSITE_NAME'] + ' - О нас'
-    document.querySelector('#scroll').scroll(0, 0);
   });
 
   return (
@@ -22,7 +21,7 @@ export default function AboutPage() {
               <BreadcrumbTitle title="О нас" />
             </Breadcrumbs>
           </div>
-          <h2 className={styles['title']}>О нас</h2>
+          <Title>О нас</Title>
         </div>
       </PartitionLayout>
   );

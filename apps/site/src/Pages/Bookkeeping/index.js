@@ -1,5 +1,5 @@
 
-import { BreadcrumbLink, Breadcrumbs, BreadcrumbTitle, PartitionLayout } from '@ui.packages/kit';
+import { BreadcrumbLink, Breadcrumbs, BreadcrumbTitle, PartitionLayout, Title } from '@ui.packages/kit';
 
 import React, { useEffect } from 'react';
 
@@ -10,7 +10,6 @@ export default function BookkeepingPage() {
 
   useEffect(function initPage() {
     document.title = process.env['REACT_APP_WEBSITE_NAME'] + ' - Бухгалтерское сопровождение'
-    document.querySelector('#scroll').scroll(0, 0);
   });
 
   return (
@@ -30,7 +29,7 @@ export default function BookkeepingPage() {
             <BreadcrumbTitle title="Бухгалтерское сопровождение" />
           </Breadcrumbs>
         </div>
-        <h2 className={styles['title']}>Бухгалтерское сопровождение</h2>
+        <Title>Бухгалтерское сопровождение</Title>
       </div>
 
       <h3 className="h3">Что получает клиент при заказе бухгалтерских услуг?</h3>
