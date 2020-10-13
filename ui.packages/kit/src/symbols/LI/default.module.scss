@@ -1,0 +1,28 @@
+
+@import "~@ui.packages/themes";
+
+
+:global {
+
+  .li {
+
+    display: block;
+    font: 300 18px "Exo 2", sans-serif;
+    color: $coal-dark;
+    letter-spacing: .5px;
+    padding: 0 0 0 15px;
+    line-height: 1.6;
+  }
+
+  .li:before {
+
+    display: inline-block;
+    content: '-';
+    margin: 0 7px 0 -15px;
+  }
+
+  .li + .li {
+
+    margin: 15px 0 0;
+  }
+}

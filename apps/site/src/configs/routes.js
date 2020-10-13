@@ -14,7 +14,7 @@ const Expertise = lazy(() => import(/* webpackChunkName: "personnel-page" *//* w
 const Safety = lazy(() => import(/* webpackChunkName: "personnel-page" *//* webpackMode: "lazy" */'../Pages/Safety'));
 const Partners = lazy(() => import(/* webpackChunkName: "partners-page" *//* webpackMode: "lazy" */'../Pages/Partners'));
 const Reviews = lazy(() => import(/* webpackChunkName: "consulting-page" *//* webpackMode: "lazy" */'../Pages/Reviews'));
-const Contacts = lazy(() => import(/* webpackChunkName: "сontacts-page" *//* webpackMode: "lazy" */'../Pages/Contacts'));
+const Contacts = lazy(() => import(/* webpackChunkName: "contacts-page" *//* webpackMode: "lazy" */'../Pages/Contacts'));
 
 const NotFound = lazy(() => import(/* webpackChunkName: "not-found" *//* webpackMode: "lazy" */'../Pages/NotFound'));
 

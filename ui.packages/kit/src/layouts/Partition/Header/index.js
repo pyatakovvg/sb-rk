@@ -1,5 +1,5 @@
 
-import { Menu } from '@ui.packages/kit';
+import { Menu, Link } from '@ui.packages/kit';
 import { MenuContext } from '@ui.packages/contexts';
 
 import React, { useState, useEffect, useRef, useContext } from 'react';
@@ -35,7 +35,7 @@ export default function Header() {
 
   return (
     <header ref={headerElement} className={wrapperClassName}>
-      <span className={styles['logo']} />
+      <Link className={styles['logo']} to="/" />
       <div className={styles['menu']}>
         <Menu menu={menuContext} />
       </div>

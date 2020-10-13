@@ -1,10 +1,12 @@
 
+import { Title } from '@ui.packages/kit';
+
 import React, { lazy, Suspense } from 'react';
 
 import styles from './default.module.scss';
 
 
-const Item = lazy(() => import('./Item'));
+const Item = lazy(() => import(/* webpackChunkName: "home-service" *//* webpackMode: "lazy" */'./Item'));
 
 
 export default function Services() {
@@ -12,7 +14,9 @@ export default function Services() {
   return (
     <Suspense fallback={null}>
       <article className={styles['wrapper']}>
-        <h2 className={styles['header']}>Предаставляемые услуги</h2>
+        <div className={styles['header']}>
+          <Title>Предаставляемые услуги</Title>
+        </div>
         <div className={styles['row']}>
           <div className={styles['col']}>
             <Item icon="far fa-money-bill-alt" title="Бухгалтерское сопровождение" href="/services/bookkeeping">

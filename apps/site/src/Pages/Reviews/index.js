@@ -1,5 +1,6 @@
 
-import { BreadcrumbLink, Breadcrumbs, BreadcrumbTitle, Image, PartitionLayout, Title } from '@ui.packages/kit';
+import { BreadcrumbLink, Breadcrumbs, BreadcrumbTitle, PartitionLayout } from '@ui.packages/kit';
+import { Title, Image } from '@ui.packages/kit';
 
 import React, { useEffect } from 'react';
 
