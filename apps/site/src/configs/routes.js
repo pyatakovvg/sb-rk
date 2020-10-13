@@ -1,22 +1,22 @@
 
-import React, { lazy } from 'react';
+import React from 'react';
 import { useRoutes } from "react-router-dom";
 
 
-const Home = lazy(() => import(/* webpackChunkName: "home-page" *//* webpackMode: "lazy" */'../Pages/Home'));
-const About = lazy(() => import(/* webpackChunkName: "about-page" *//* webpackMode: "lazy" */'../Pages/About'));
-const Services = lazy(() => import(/* webpackChunkName: "services-page" *//* webpackMode: "lazy" */'../Pages/Services'));
-const Legal = lazy(() => import(/* webpackChunkName: "legal-page" *//* webpackMode: "lazy" */'../Pages/Legal'));
-const Bookkeeping = lazy(() => import(/* webpackChunkName: "bookkeeping-page" *//* webpackMode: "lazy" */'../Pages/Bookkeeping'));
-const Criminal = lazy(() => import(/* webpackChunkName: "criminal-page" *//* webpackMode: "lazy" */'../Pages/Criminal'));
-const Personnel = lazy(() => import(/* webpackChunkName: "personnel-page" *//* webpackMode: "lazy" */'../Pages/Personnel'));
-const Expertise = lazy(() => import(/* webpackChunkName: "personnel-page" *//* webpackMode: "lazy" */'../Pages/Expertise'));
-const Safety = lazy(() => import(/* webpackChunkName: "personnel-page" *//* webpackMode: "lazy" */'../Pages/Safety'));
-const Partners = lazy(() => import(/* webpackChunkName: "partners-page" *//* webpackMode: "lazy" */'../Pages/Partners'));
-const Reviews = lazy(() => import(/* webpackChunkName: "consulting-page" *//* webpackMode: "lazy" */'../Pages/Reviews'));
-const Contacts = lazy(() => import(/* webpackChunkName: "contacts-page" *//* webpackMode: "lazy" */'../Pages/Contacts'));
+import Home from /* webpackChunkName: "home-page" *//* webpackMode: "lazy" */'../Pages/Home';
+import About from /* webpackChunkName: "about-page" *//* webpackMode: "lazy" */'../Pages/About';
+import Services from /* webpackChunkName: "services-page" *//* webpackMode: "lazy" */'../Pages/Services';
+import Legal from /* webpackChunkName: "legal-page" *//* webpackMode: "lazy" */'../Pages/Legal';
+import Bookkeeping from /* webpackChunkName: "bookkeeping-page" *//* webpackMode: "lazy" */'../Pages/Bookkeeping';
+import Criminal from /* webpackChunkName: "criminal-page" *//* webpackMode: "lazy" */'../Pages/Criminal';
+import Personnel from /* webpackChunkName: "personnel-page" *//* webpackMode: "lazy" */'../Pages/Personnel';
+import Expertise from /* webpackChunkName: "personnel-page" *//* webpackMode: "lazy" */'../Pages/Expertise';
+import Safety from /* webpackChunkName: "personnel-page" *//* webpackMode: "lazy" */'../Pages/Safety';
+import Partners from /* webpackChunkName: "partners-page" *//* webpackMode: "lazy" */'../Pages/Partners';
+import Reviews from /* webpackChunkName: "consulting-page" *//* webpackMode: "lazy" */'../Pages/Reviews';
+import Contacts from /* webpackChunkName: "contacts-page" *//* webpackMode: "lazy" */'../Pages/Contacts';
 
-const NotFound = lazy(() => import(/* webpackChunkName: "not-found" *//* webpackMode: "lazy" */'../Pages/NotFound'));
+import NotFound from /* webpackChunkName: "not-found" *//* webpackMode: "lazy" */'../Pages/NotFound';
 
 
 export default function Routes() {
