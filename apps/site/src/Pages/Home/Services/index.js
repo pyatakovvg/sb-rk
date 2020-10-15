@@ -15,7 +15,7 @@ export default function Services() {
     <Suspense fallback={null}>
       <article className={styles['wrapper']}>
         <div className={styles['header']}>
-          <Title>Предаставляемые услуги</Title>
+          <Title>Предоставляемые услуги</Title>
         </div>
         <div className={styles['row']}>
           <div className={styles['col']}>
