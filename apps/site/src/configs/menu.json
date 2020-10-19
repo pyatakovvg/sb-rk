@@ -6,7 +6,32 @@
   {
     "title": "Услуги",
     "href": "/services",
-    "hasChildren": true
+    "children": [
+      {
+        "title": "Бухгалтерское сопровождение",
+        "href": "/services/bookkeeping"
+      },
+      {
+        "title": "Юридическое сопровождение",
+        "href": "/services/legal"
+      },
+      {
+        "title": "Сопровождение по уголовным делам",
+        "href": "/services/criminal"
+      },
+      {
+        "title": "Кадровое сопровождение",
+        "href": "/services/personnel"
+      },
+      {
+        "title": "Независимая оценка и экспертиза",
+        "href": "/services/expertise"
+      },
+      {
+        "title": "Безопасность труда",
+        "href": "/services/safety"
+      }
+    ]
   },
   {
     "title": "Партнеры",

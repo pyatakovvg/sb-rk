@@ -7,10 +7,10 @@ import styles from './default.module.scss';
 const Address = lazy(() => import('./Address'));
 const Phone = lazy(() => import('./Phone'));
 const Email = lazy(() => import('./Email'));
+const Social = lazy(() => import('./Social'));
 
 
 export default function Footer() {
-
   return (
     <footer className={styles['wrapper']}>
       <div className={styles['content']}>
@@ -34,6 +34,9 @@ export default function Footer() {
             </Suspense>
           </div>
         </div>
+        <Suspense fallback={null}>
+          <Social />
+        </Suspense>
       </div>
     </footer>
   );

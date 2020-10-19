@@ -40,7 +40,7 @@ export default function Header() {
         <Menu menu={menuContext} />
       </div>
       <div className={styles['contacts']}>
-        <p className={styles['info']}>Наши контакты:</p>
+        <p className={styles['info']}>Как сязаться:</p>
         <p className={styles['info']}><i className={cn(styles['icon'], "fas fa-phone")} /> +7 (978) 025 44 25</p>
         <p className={styles['info']}><i className={cn(styles['icon'], "far fa-envelope")} /> <a className={styles['link']} target="_blank" rel="noreferrer" href="mailto:sb-rk@mail.ru">sb-rk@mail.ru</a></p>
       </div>

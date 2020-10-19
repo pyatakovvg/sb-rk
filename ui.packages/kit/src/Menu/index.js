@@ -11,7 +11,7 @@ export default function Menu({ menu }) {
   return (
     <nav className={styles['navigate']}>
       {menu.map((item, index) => (
-        <MenuItem key={index} title={item['title']} href={item['href']} hasChildren={item['hasChildren']} />
+        <MenuItem key={index} title={item['title']} href={item['href']} subMenu={item['children']} />
       ))}
     </nav>
   );

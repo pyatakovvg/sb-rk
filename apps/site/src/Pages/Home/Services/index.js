@@ -10,7 +10,6 @@ const Item = lazy(() => import(/* webpackChunkName: "home-service" *//* webpackM
 
 
 export default function Services() {
-
   return (
     <Suspense fallback={null}>
       <article className={styles['wrapper']}>
