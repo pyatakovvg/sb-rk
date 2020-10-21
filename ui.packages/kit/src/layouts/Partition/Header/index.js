@@ -14,20 +14,20 @@ export default function Header() {
 
   const menuContext = useContext(MenuContext);
 
-  useEffect(() => {
-    function handleScrollEvent(event) {
-      event.preventDefault();
-      if (headerElement['current']) {
-        const rect = headerElement['current'].getBoundingClientRect();
-        setOut(rect['bottom'] <= 0);
-      }
-    }
-
-    document.querySelector('#scroll').addEventListener('scroll', handleScrollEvent);
-    return function cleanup() {
-      document.querySelector('#scroll').removeEventListener('scroll', handleScrollEvent);
-    };
-  });
+  // useEffect(() => {
+  //   function handleScrollEvent(event) {
+  //     event.preventDefault();
+  //     if (headerElement['current']) {
+  //       const rect = headerElement['current'].getBoundingClientRect();
+  //       setOut(rect['bottom'] <= 0);
+  //     }
+  //   }
+  //
+  //   document.querySelector('#scroll').addEventListener('scroll', handleScrollEvent);
+  //   return function cleanup() {
+  //     document.querySelector('#scroll').removeEventListener('scroll', handleScrollEvent);
+  //   };
+  // });
 
   const wrapperClassName = cn(styles['wrapper'], {
     [styles['wrapper--fixed']]: isOut,

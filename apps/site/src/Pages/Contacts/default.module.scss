@@ -15,3 +15,65 @@
   margin: 0 0 20px;
 }
 
+.content {
+
+  display: flex;
+  flex-direction: row;
+  flex: 1 0;
+  height: 500px;
+}
+
+.map {
+
+  display: flex;
+  flex-direction: column;
+  flex: 1 0;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 7px solid $pale-grey;
+}
+
+.info {
+
+  display: block;
+  width: 600px;
+  padding: 0 0 0 40px;
+  box-sizing: border-box;
+}
+
+
+.line {
+
+  display: flex;
+  flex-direction: row;
+  flex: 1 0;
+
+  & + & {
+
+    margin: 40px 0 0;
+  }
+}
+
+.asign {
+
+  display: block;
+}
+
+.icon {
+
+  font-size: 30px;
+  color: $pale-lilac;
+}
+
+.article {
+
+  display: flex;
+  flex-direction: column;
+  flex: 1 0;
+  padding: 0 0 0 40px;
+}
+
+.text {
+
+  font: 300 24px "Exo 2";
+}

@@ -13,7 +13,7 @@ export default function Phone() {
         <span className={cn(styles['icon'], 'fas fa-phone')} />
       </div>
       <div className={styles['content']}>
-        +7 915 453-77-66
+        +7 (978) 025 44 25
       </div>
     </div>
   );
