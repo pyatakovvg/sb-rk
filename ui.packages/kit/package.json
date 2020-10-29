@@ -16,16 +16,16 @@
     "@ui.packages/themes": "1.0.0",
     "classnames": "2.2.6",
     "prop-types": "15.7.2",
-    "react": "17.0.0-rc.1",
-    "react-dom": "17.0.0-rc.1",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
     "react-router-dom": "6.0.0-beta.0"
   },
   "devDependencies": {
-    "@babel/cli": "7.11.5",
-    "@babel/core": "7.11.5",
+    "@babel/cli": "7.12.1",
+    "@babel/core": "7.12.3",
     "core-js": "3.6.5",
     "cross-env": "7.0.2",
-    "resolve": "1.17.0"
+    "resolve": "1.18.1"
   },
   "babel": {
     "presets": [
