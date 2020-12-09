@@ -4,6 +4,7 @@
   "packages": [
     "ui.packages/*",
     "packages/*",
+    "modules/*",
     "apps/*"
   ],
   "npmClient": "yarn",

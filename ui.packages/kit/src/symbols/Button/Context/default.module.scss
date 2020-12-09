@@ -1,0 +1,49 @@
+
+@import "~@ui.packages/themes";
+
+
+.button {
+
+  display: inline-block;
+  border: none;
+  background: $white;
+  color: $coal-dark;
+  text-decoration: underline;
+  outline: none;
+  padding: 12px 20px 14px;
+  font: 500 16px "Exo 2", sans-serif;
+  letter-spacing: .5px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: color 200ms;
+
+  &:hover {
+
+    color: lighten($coal-dark, 10%);
+  }
+
+  & + * {
+
+    margin: 0 0 0 20px;
+  }
+}
+
+.mode {
+
+  &--primary {
+
+    color: $primary;
+
+    &:hover {
+
+      color: lighten($primary, 10%);
+    }
+  }
+
+  &--disabled,
+  &--disabled:hover {
+
+    color: $pale-lilac;
+    cursor: default;
+  }
+}

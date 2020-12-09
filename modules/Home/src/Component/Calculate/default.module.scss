@@ -1,0 +1,41 @@
+
+@import "~@ui.packages/themes";
+
+
+.wrapper {
+
+  display: block;
+  padding: 90px 0 120px;
+  background-color: $white;
+  background-image: linear-gradient(90deg, transparent, rgba($white, .5)), url("./background.jpg");
+  background-position: top center;
+  background-attachment: scroll, scroll;
+  background-size: cover, cover;
+}
+
+.header {
+
+  display: block;
+  text-align: center;
+  margin: 0 0 120px;
+}
+
+.content {
+
+  display: block;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.row {
+
+  display: flex;
+  flex: 1 0;
+}
+
+.col {
+
+  display: flex;
+  flex-direction: column;
+  flex: 1 0;
+}

@@ -8,6 +8,8 @@ import styles from './default.module.scss';
 
 const Header = lazy(() => import(/* webpackChunkName: "home-header" *//* webpackMode: "lazy" */'./Header'));
 const Services = lazy(() => import(/* webpackChunkName: "home-services" *//* webpackMode: "lazy" */'./Services'));
+const Other = lazy(() => import(/* webpackChunkName: "home-services" *//* webpackMode: "lazy" */'./Other'));
+const Calculate = lazy(() => import(/* webpackChunkName: "home-calculate" *//* webpackMode: "lazy" */'./Calculate'));
 
 
 export default function AboutPage() {
@@ -24,6 +26,12 @@ export default function AboutPage() {
         </Suspense>
         <Suspense fallback={null}>
           <Services />
+        </Suspense>
+        <Suspense fallback={null}>
+          <Other />
+        </Suspense>
+        <Suspense fallback={null}>
+          <Calculate />
         </Suspense>
       </article>
     </MainLayout>

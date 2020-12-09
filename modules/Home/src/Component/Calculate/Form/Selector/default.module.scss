@@ -1,0 +1,48 @@
+
+@import "~@ui.packages/themes";
+
+
+.wrapper {
+
+  display: inline-block;
+  min-width: 40px;
+  background: rgba($pinkish-grey, .3);
+  padding: 15px 20px;
+  text-align: center;
+  color: $black;
+  cursor: pointer;
+  transition: color 200ms, background-color 200ms;
+
+  &:hover {
+
+    background: rgba($primary, .2);
+  }
+
+  &--selected,
+  &--selected:hover {
+
+    background: $primary;
+    color: $white;
+  }
+
+  &:first-child {
+    border-radius: 8px 0 0 8px;
+  }
+
+  &:last-child {
+    border-radius: 0 8px 8px 0;
+  }
+
+  & + & {
+    border-left: 1px solid $very-light-pink;
+  }
+}
+
+.label {
+
+  display: block;
+  font: 500 15px "Exo 2", sans-serif;
+  letter-spacing: .2px;
+  color: inherit;
+}
+

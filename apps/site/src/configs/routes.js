@@ -2,9 +2,9 @@
 import React from 'react';
 import { useRoutes } from "react-router-dom";
 
+import Home from '@modules/home';
+import About from '@modules/about';
 
-import Home from /* webpackChunkName: "home-page" *//* webpackMode: "lazy" */'../Pages/Home';
-import About from /* webpackChunkName: "about-page" *//* webpackMode: "lazy" */'../Pages/About';
 import Services from /* webpackChunkName: "services-page" *//* webpackMode: "lazy" */'../Pages/Services';
 import Legal from /* webpackChunkName: "legal-page" *//* webpackMode: "lazy" */'../Pages/Legal';
 import Bookkeeping from /* webpackChunkName: "bookkeeping-page" *//* webpackMode: "lazy" */'../Pages/Bookkeeping';

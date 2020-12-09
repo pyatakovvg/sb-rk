@@ -1,0 +1,63 @@
+
+@import "~@ui.packages/themes";
+
+
+.wrapper {
+
+  display: block;
+
+  & + & {
+
+    margin: 20px 0 0;
+  }
+}
+
+.label {
+
+  display: block;
+  font: 14px "Exo 2", sans-serif;
+  color: $coal-dark;
+  padding: 0 0 8px 13px;
+  letter-spacing: .2px;
+
+  &--require:after {
+
+    display: inline-block;
+    content: '*';
+    color: $danger;
+    margin: 0 0 0 4px;
+  }
+}
+
+.input {
+
+  display: block;
+  border: 1px solid $pale-lilac;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.element {
+
+  display: block;
+  border: none;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 12px;
+  font: 300 16px "Exo 2", sans-serif;
+  color: $coal-dark;
+}
+
+.mode {
+
+  &--danger {
+
+    .label {
+      color: $danger;
+    }
+    .input {
+      border-color: $danger;
+    }
+  }
+}
