@@ -1,6 +1,10 @@
 
 # BUILD APP
+
 FROM node:14-alpine as ui
+
+
+# SET CONFIGS
 
 RUN npm config set package-lock false
 #RUN npm i yarn -g --yes
@@ -18,6 +22,9 @@ COPY ./yarn.lock                  .
 
 RUN yarn
 
+
+# BUILD PACKAGES
+
 WORKDIR /app/ui.packages/kit
 RUN ["yarn", "run", "build"]
 
@@ -25,10 +32,56 @@ WORKDIR /app/ui.packages/contexts
 RUN ["yarn", "run", "build"]
 
 
+# BUILD MODULES
+
+WORKDIR /app/modules/About
+RUN ["yarn", "run", "build"]
+
+WORKDIR /app/modules/Bookkeeping
+RUN ["yarn", "run", "build"]
+
+WORKDIR /app/modules/Contacts
+RUN ["yarn", "run", "build"]
+
+WORKDIR /app/modules/Criminal
+RUN ["yarn", "run", "build"]
+
+WORKDIR /app/modules/Expertise
+RUN ["yarn", "run", "build"]
+
+WORKDIR /app/modules/Home
+RUN ["yarn", "run", "build"]
+
+WORKDIR /app/modules/Legal
+RUN ["yarn", "run", "build"]
+
+WORKDIR /app/modules/NotFound
+RUN ["yarn", "run", "build"]
+
+WORKDIR /app/modules/Partners
+RUN ["yarn", "run", "build"]
+
+WORKDIR /app/modules/Personnel
+RUN ["yarn", "run", "build"]
+
+WORKDIR /app/modules/Reviews
+RUN ["yarn", "run", "build"]
+
+WORKDIR /app/modules/Safety
+RUN ["yarn", "run", "build"]
+
+WORKDIR /app/modules/Services
+RUN ["yarn", "run", "build"]
+
+
+# BUILD SITE
+
 WORKDIR /app/apps/site
 RUN ["yarn", "run", "build"]
 
+
 # START NGINX
+
 FROM nginx
 
 COPY --from=ui /app/apps/site/build /app
