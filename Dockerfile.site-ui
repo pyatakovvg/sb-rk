@@ -16,6 +16,7 @@ COPY ./apps/site/public           ./apps/site/public
 COPY ./apps/site/package.json     ./apps/site
 COPY ./apps/site/.env.production  ./apps/site
 COPY ./ui.packages                ./ui.packages
+COPY ./modules                    ./modules
 COPY ./package.json               .
 COPY ./lerna.json                 .
 COPY ./yarn.lock                  .
