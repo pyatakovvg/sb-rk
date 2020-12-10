@@ -29,18 +29,13 @@ function validate(values) {
 
 
 function matStateToProps(state) {
-  console.log(state)
   return {
     formData: getFormValues('calculator')(state),
   };
 }
 
 
-export default connect(
-  matStateToProps,
-  null,
-  null,
-)(reduxForm({
+export default reduxForm({
   form: 'calculator',
   initialValues: {
     'organizational-legal-form': 'individual-entrepreneur',
@@ -49,4 +44,8 @@ export default connect(
     'employees': [0]
   },
   validate,
-})(Component));
+})(connect(
+  matStateToProps,
+  null,
+  null,
+)(Component));

@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "@modules/about",
+  "name": "@modules/criminal",
   "version": "1.0.0",
   "main": "./lib/index.js",
   "scripts": {

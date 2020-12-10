@@ -4,19 +4,18 @@ import { useRoutes } from "react-router-dom";
 
 import Home from '@modules/home';
 import About from '@modules/about';
+import Services from '@modules/services';
+import Legal from '@modules/legal';
+import Bookkeeping from '@modules/bookkeeping';
+import Criminal from '@modules/criminal';
+import Personnel from '@modules/personnel';
+import Expertise from '@modules/expertise';
+import Safety from '@modules/safety';
+import Partners from '@modules/partners';
+import Reviews from '@modules/reviews';
+import Contacts from '@modules/contacts';
 
-import Services from /* webpackChunkName: "services-page" *//* webpackMode: "lazy" */'../Pages/Services';
-import Legal from /* webpackChunkName: "legal-page" *//* webpackMode: "lazy" */'../Pages/Legal';
-import Bookkeeping from /* webpackChunkName: "bookkeeping-page" *//* webpackMode: "lazy" */'../Pages/Bookkeeping';
-import Criminal from /* webpackChunkName: "criminal-page" *//* webpackMode: "lazy" */'../Pages/Criminal';
-import Personnel from /* webpackChunkName: "personnel-page" *//* webpackMode: "lazy" */'../Pages/Personnel';
-import Expertise from /* webpackChunkName: "personnel-page" *//* webpackMode: "lazy" */'../Pages/Expertise';
-import Safety from /* webpackChunkName: "personnel-page" *//* webpackMode: "lazy" */'../Pages/Safety';
-import Partners from /* webpackChunkName: "partners-page" *//* webpackMode: "lazy" */'../Pages/Partners';
-import Reviews from /* webpackChunkName: "consulting-page" *//* webpackMode: "lazy" */'../Pages/Reviews';
-import Contacts from /* webpackChunkName: "contacts-page" *//* webpackMode: "lazy" */'../Pages/Contacts';
-
-import NotFound from /* webpackChunkName: "not-found" *//* webpackMode: "lazy" */'../Pages/NotFound';
+import NotFound from '@modules/not-found';
 
 
 export default function Routes() {

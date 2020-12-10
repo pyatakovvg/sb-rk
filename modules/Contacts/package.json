@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "@modules/about",
+  "name": "@modules/contacts",
   "version": "1.0.0",
   "main": "./lib/index.js",
   "scripts": {
@@ -11,7 +11,8 @@
     "@ui.packages/kit": "1.0.0",
     "@ui.packages/themes": "1.0.0",
     "react": "17.0.1",
-    "cross-env": "7.0.3"
+    "cross-env": "7.0.3",
+    "react-yandex-maps": "4.6.0"
   },
   "devDependencies": {
     "@babel/cli": "7.12.8",
