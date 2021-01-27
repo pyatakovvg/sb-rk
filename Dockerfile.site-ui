@@ -1,7 +1,7 @@
 
 # BUILD APP
 
-FROM node:14-alpine as ui
+FROM node:15-alpine as ui
 
 
 # SET CONFIGS
