@@ -32,7 +32,8 @@
 
     display: block;
     color: $white;
-    font: 500 50px "Exo 2", sans-serif;
+    font-weight: 500;
+    font-size: 50px;
     text-transform: uppercase;
     letter-spacing: 4px;
   }
@@ -40,7 +41,8 @@
   &__info {
 
     display: block;
-    font: 500 22px "Exo 2", sans-serif;
+    font-weight: 500;
+    font-size: 22px;
     text-transform: uppercase;
     color: $white;
     letter-spacing: 4px;

@@ -5,7 +5,7 @@ FROM node:14-alpine as ui
 
 
 # SET CONFIGS
-
+RUN apk update && apk add bash
 RUN npm config set package-lock false
 #RUN npm i yarn -g --yes
 
@@ -17,62 +17,15 @@ COPY ./apps/site/package.json     ./apps/site
 COPY ./apps/site/.env.production  ./apps/site
 COPY ./ui.packages                ./ui.packages
 COPY ./modules                    ./modules
-COPY ./package.json               .
-COPY ./lerna.json                 .
-COPY ./yarn.lock                  .
+COPY ./package.json               ./
+COPY ./lerna.json                 ./
+COPY ./yarn.lock                  ./
+COPY ./build-ui.sh                ./
 
 RUN yarn
 
-
-# BUILD PACKAGES
-
-WORKDIR /app/ui.packages/kit
-RUN ["yarn", "run", "build"]
-
-WORKDIR /app/ui.packages/contexts
-RUN ["yarn", "run", "build"]
-
-
-# BUILD MODULES
-
-WORKDIR /app/modules/About
-RUN ["yarn", "run", "build"]
-
-WORKDIR /app/modules/Bookkeeping
-RUN ["yarn", "run", "build"]
-
-WORKDIR /app/modules/Contacts
-RUN ["yarn", "run", "build"]
-
-WORKDIR /app/modules/Criminal
-RUN ["yarn", "run", "build"]
-
-WORKDIR /app/modules/Expertise
-RUN ["yarn", "run", "build"]
-
-WORKDIR /app/modules/Home
-RUN ["yarn", "run", "build"]
-
-WORKDIR /app/modules/Legal
-RUN ["yarn", "run", "build"]
-
-WORKDIR /app/modules/NotFound
-RUN ["yarn", "run", "build"]
-
-WORKDIR /app/modules/Partners
-RUN ["yarn", "run", "build"]
-
-WORKDIR /app/modules/Personnel
-RUN ["yarn", "run", "build"]
-
-WORKDIR /app/modules/Reviews
-RUN ["yarn", "run", "build"]
-
-WORKDIR /app/modules/Safety
-RUN ["yarn", "run", "build"]
-
-WORKDIR /app/modules/Services
-RUN ["yarn", "run", "build"]
+RUN chmod +x ./build-ui.sh
+RUN ./build-admin-packages.sh
 
 
 # BUILD SITE

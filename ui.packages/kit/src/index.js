@@ -9,6 +9,9 @@ export { default as RadioBoxField } from './fields/RadioBoxField';
 
 export { default as Image } from './symbols/Image';
 export { default as Title } from './symbols/Title';
+export { default as Header } from './symbols/Header';
+export { default as Block } from './symbols/Block';
+export { default as Text } from './symbols/Text';
 export { default as P } from './symbols/P';
 export { default as H3 } from './symbols/H3';
 export { default as H4 } from './symbols/H4';

@@ -10,7 +10,8 @@
 .title {
 
   display: block;
-  font: 500 16px "Exo 2", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
   color: rgba($coal-dark, .5);
   white-space: nowrap;
 }

@@ -40,7 +40,7 @@ export default reduxForm({
   initialValues: {
     'organizational-legal-form': 'individual-entrepreneur',
     'tax-system': 'sts-income',
-    'operations': [10],
+    'operations': [0],
     'employees': [0]
   },
   validate,

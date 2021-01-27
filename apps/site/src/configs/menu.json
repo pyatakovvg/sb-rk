@@ -8,6 +8,10 @@
     "href": "/services",
     "children": [
       {
+        "title": "Бизнес-консультирование",
+        "href": "/services/bisenes"
+      },
+      {
         "title": "Бухгалтерское сопровождение",
         "href": "/services/bookkeeping"
       },
@@ -30,16 +34,12 @@
       {
         "title": "Безопасность труда",
         "href": "/services/safety"
+      },
+      {
+        "title": "Аудит",
+        "href": "/services/audit"
       }
     ]
-  },
-  {
-    "title": "Партнеры",
-    "href": "/partners"
-  },
-  {
-    "title": "Отзывы",
-    "href": "/reviews"
   },
   {
     "title": "Контакты",

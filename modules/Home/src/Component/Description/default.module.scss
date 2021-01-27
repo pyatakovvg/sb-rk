@@ -1,0 +1,42 @@
+
+@import "~@ui.packages/themes";
+
+
+.wrapper {
+
+  display: block;
+  padding: 90px 0 60px;
+  background-color: $pale-grey;
+  background-image: url("./noice.png");
+}
+
+.header {
+
+  display: block;
+  text-align: center;
+  margin: 0 0 90px;
+}
+
+.content {
+
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 1200px;
+}
+
+.columns {
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: -30px -40px 0 0;
+}
+
+.column {
+
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 50%;
+  margin: 40px 0 0;
+}

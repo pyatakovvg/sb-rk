@@ -4,6 +4,7 @@
   "license": "MIT",
   "version": "1.0.0",
   "main": "./src/default.scss",
+  "type": "module",
   "author": {
     "name": "Viktor Pyatakov",
     "email": "viktor.pyatakov@pimpay.ru"

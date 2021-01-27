@@ -25,7 +25,8 @@
 .text {
 
   display: inline-block;
-  font: 300 10px "Exo 2", sans-serif;
+  font-weight: 300;
+  font-size: 10px;
   color: $danger;
   letter-spacing: .5px;
 }

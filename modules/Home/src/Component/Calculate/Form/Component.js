@@ -17,17 +17,20 @@ const OSNO = 'osno';
 const PATENT = 'patent';
 
 
-function calculateTaxSystem(value) {
-  switch(value) {
-    case STS_INCOME_EXPENSES: return 3000;
-    case OSNO: return 5000;
-    case PATENT: return 500;
-    default: return 1000;
-  }
-}
+// function calculateTaxSystem(value) {
+//   console.log(value)
+//   return 0;
+  // switch(value) {
+  //   case STS_INCOME_EXPENSES: return 3000;
+  //   case OSNO: return 5000;
+  //   case PATENT: return 500;
+  //   default: return 1000;
+  // }
+// }
 
 function calculateFinalAmount(data) {
-  return calculateTaxSystem(data[TAX_SYSTEM]);
+  console.log(data)
+  return 0;
 }
 
 export default function Header({ handleSubmit, valid, pristine, inProcess, formData, ...props }) {
@@ -42,7 +45,7 @@ export default function Header({ handleSubmit, valid, pristine, inProcess, formD
       <div className={styles['controls']}>
         <div className={styles['container']}>
           <div className={styles['header']}>
-            <H4>Организационно правовая форма</H4>
+            <H4>Организационно-правовая форма</H4>
           </div>
           <RadioBoxField name="organizational-legal-form" disabled={inProcess}>
             <Radio name="individual-entrepreneur">
@@ -62,24 +65,26 @@ export default function Header({ handleSubmit, valid, pristine, inProcess, formD
           </div>
           <RadioBoxField name={TAX_SYSTEM} disabled={inProcess}>
             <Radio name={STS_INCOME}>
-              <Selector>УСН доходы</Selector>
+              <Selector>УСН (доходы)</Selector>
             </Radio>
             <Radio name={STS_INCOME_EXPENSES}>
-              <Selector>УСН доходы/расходы</Selector>
+              <Selector>УСН (доходы - расходы)</Selector>
             </Radio>
             <Radio name={OSNO}>
               <Selector>ОСНО</Selector>
             </Radio>
-            <Radio name={PATENT}>
-              <Selector>Патент</Selector>
-            </Radio>
+            {formData['organizational-legal-form'] === 'individual-entrepreneur' && (
+              <Radio name={PATENT}>
+                <Selector>ПСО</Selector>
+              </Radio>
+            )}
           </RadioBoxField>
         </div>
         <div className={styles['container']}>
           <div className={styles['header']}>
             <H4>Количество операций в месяц</H4>
           </div>
-          <RangeField name="operations" min={10} max={150} marker="до" disabled={inProcess} />
+          <RangeField name="operations" min={0} max={150} disabled={inProcess} />
         </div>
         <div className={styles['container']}>
           <div className={styles['header']}>

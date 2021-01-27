@@ -1,15 +1,22 @@
 
 import { MainLayout } from '@ui.packages/kit';
 
-import React, { lazy, Suspense, useEffect } from 'react';
+import React, { useEffect } from 'react';
 
 import styles from './default.module.scss';
 
 
-const Header = lazy(() => import(/* webpackChunkName: "home-header" *//* webpackMode: "lazy" */'./Header'));
-const Services = lazy(() => import(/* webpackChunkName: "home-services" *//* webpackMode: "lazy" */'./Services'));
-const Other = lazy(() => import(/* webpackChunkName: "home-services" *//* webpackMode: "lazy" */'./Other'));
-const Calculate = lazy(() => import(/* webpackChunkName: "home-calculate" *//* webpackMode: "lazy" */'./Calculate'));
+import Header from './Header';
+import Description from './Description';
+import Bisenes from './Bisenes';
+import Bookkeeping from './Bookkeeping';
+import Legal from './Legal';
+import Expertise from './Expertise';
+import Safety from './Safety';
+import Audit from './Audit';
+// import Services from './Services';
+// import Other from './Other';
+import Calculate from './Calculate';
 
 
 export default function AboutPage() {
@@ -21,18 +28,17 @@ export default function AboutPage() {
   return (
     <MainLayout>
       <article className={styles['wrapper']}>
-        <Suspense fallback={null}>
-          <Header />
-        </Suspense>
-        <Suspense fallback={null}>
-          <Services />
-        </Suspense>
-        <Suspense fallback={null}>
-          <Other />
-        </Suspense>
-        <Suspense fallback={null}>
-          <Calculate />
-        </Suspense>
+        <Header />
+        <Description />
+        <Bisenes />
+        <Bookkeeping />
+        <Legal />
+        <Expertise />
+        <Safety />
+        <Audit />
+        {/*<Services />*/}
+        {/*<Other />*/}
+        <Calculate />
       </article>
     </MainLayout>
   );

@@ -1,0 +1,50 @@
+
+@import "~@ui.packages/themes";
+
+
+.wrapper {
+
+  display: flex;
+  flex-direction: row;
+  flex: 1 0;
+  background: rgba($white, .6);
+  padding: 30px;
+  margin: 0 40px 0 0;
+  border-bottom: 2px solid $pale-lilac;
+  border-right: 2px solid $pale-lilac;
+}
+
+.logo {
+
+  display: flex;
+  flex-direction: column;
+  flex: 0 0;
+  justify-content: center;
+}
+
+.icon {
+
+  display: inline-block;
+  font-size: 40px;
+  color: $success;
+}
+
+.content {
+
+  display: flex;
+  flex-direction: column;
+  flex: 1 0;
+  margin: 0 0 0 30px;
+  justify-content: center;
+}
+
+.title {
+
+  display: block;
+}
+
+.description {
+
+  display: block;
+  margin: 20px 0 0;
+}

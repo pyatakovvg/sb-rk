@@ -38,7 +38,8 @@
 .title {
 
   display: block;
-  font: 600 21px "Exo 2", sans-serif;
+  font-weight: 600;
+  font-size: 21px;
   color: $coal-dark;
   text-align: center;
   text-transform: uppercase;
@@ -49,7 +50,7 @@
 .description {
 
   display: block;
-  font: 15px "Exo 2", sans-serif;
+  font-size: 15px;
   color: $coal-dark;
   margin: 20px 0 0;
   text-align: justify;
@@ -65,7 +66,8 @@
 
 .link {
 
-  font: 500 15px "Exo 2", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
   color: $primary;
 }
 

@@ -1,34 +1,33 @@
 
 import { MenuContext, RoutesContext } from '@ui.packages/contexts';
 
+import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import React, { lazy, Suspense } from 'react';
+import { BrowserRouter } from 'react-router-dom';
 
 import store from './redux/configureStore';
 import * as serviceWorker from './serviceWorker';
 
+import App from './App';
+
 import './styles/default.module.scss';
 
 import menuConfig from './configs/menu.json';
-import RoutesConfig from './configs/routes';
-
-
-const App = lazy(() => import(/* webpackChunkName: "main-app" *//* webpackMode: "lazy" */'./App'));
+import routesConfig from './configs/routes';
 
 
 (async () => {
-
   ReactDOM.render((
-    <Suspense fallback={null}>
-      <Provider store={store}>
-        <RoutesContext.Provider value={RoutesConfig}>
-          <MenuContext.Provider value={menuConfig}>
+    <Provider store={store}>
+      <RoutesContext.Provider value={routesConfig}>
+        <MenuContext.Provider value={menuConfig}>
+          <BrowserRouter>
             <App />
-          </MenuContext.Provider>
-        </RoutesContext.Provider>
-      </Provider>
-    </Suspense>
+          </BrowserRouter>
+        </MenuContext.Provider>
+      </RoutesContext.Provider>
+    </Provider>
   ), document.getElementById('root'));
 
   serviceWorker.unregister();

@@ -4,6 +4,7 @@
   "license": "MIT",
   "version": "1.0.0",
   "main": "./lib/index.js",
+  "type": "module",
   "author": {
     "name": "Viktor Pyatakov",
     "email": "viktor.pyatakov@pimpay.ru"
@@ -22,8 +23,8 @@
     "react-router-dom": "6.0.0-beta.0"
   },
   "devDependencies": {
-    "@babel/cli": "7.12.8",
-    "@babel/core": "7.12.9",
+    "@babel/cli": "7.12.10",
+    "@babel/core": "7.12.10",
     "core-js": "3.8.1",
     "cross-env": "7.0.3",
     "resolve": "1.19.0"

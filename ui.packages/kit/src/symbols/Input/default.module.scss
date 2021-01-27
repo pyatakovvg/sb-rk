@@ -15,7 +15,7 @@
 .label {
 
   display: block;
-  font: 14px "Exo 2", sans-serif;
+  font-size: 14px;
   color: $coal-dark;
   padding: 0 0 8px 13px;
   letter-spacing: .2px;
@@ -45,7 +45,8 @@
   width: 100%;
   box-sizing: border-box;
   padding: 10px 12px;
-  font: 300 16px "Exo 2", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
   color: $coal-dark;
 }
 

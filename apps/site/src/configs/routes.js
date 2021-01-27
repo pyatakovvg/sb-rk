@@ -1,6 +1,5 @@
 
 import React from 'react';
-import { useRoutes } from "react-router-dom";
 
 import Home from '@modules/home';
 import About from '@modules/about';
@@ -18,64 +17,64 @@ import Contacts from '@modules/contacts';
 import NotFound from '@modules/not-found';
 
 
-export default function Routes() {
-  return useRoutes([
-    {
-      path: '/',
-      element: <Home />
-    },
-    {
-      path: '/services',
-      children: [
-        {
-          path: '/',
-          element: <Services />,
-        },
-        {
-          path: '/legal',
-          element: <Legal />,
-        },
-        {
-          path: '/bookkeeping',
-          element: <Bookkeeping />,
-        },
-        {
-          path: '/criminal',
-          element: <Criminal />,
-        },
-        {
-          path: '/personnel',
-          element: <Personnel />,
-        },
-        {
-          path: '/expertise',
-          element: <Expertise />,
-        },
-        {
-          path: '/safety',
-          element: <Safety />,
-        }
-      ]
-    },
-    {
-      path: '/partners',
-      element: <Partners />,
-    },
-    {
-      path: '/reviews',
-      element: <Reviews />,
-    },
-    {
-      path: '/contacts',
-      element: <Contacts />,
-    },
-    {
-      path: '/about',
-      element: <About />,
-    },
-    {
-      path: '*',
-      element: <NotFound />,
-    }
-  ]);
-}
+const routes = [
+  {
+    path: '/',
+    element: <Home />
+  },
+  {
+    path: '/services',
+    children: [
+      {
+        path: '/',
+        element: <Services />,
+      },
+      {
+        path: '/legal',
+        element: <Legal />,
+      },
+      {
+        path: '/bookkeeping',
+        element: <Bookkeeping />,
+      },
+      {
+        path: '/criminal',
+        element: <Criminal />,
+      },
+      {
+        path: '/personnel',
+        element: <Personnel />,
+      },
+      {
+        path: '/expertise',
+        element: <Expertise />,
+      },
+      {
+        path: '/safety',
+        element: <Safety />,
+      }
+    ]
+  },
+  {
+    path: '/partners',
+    element: <Partners />,
+  },
+  {
+    path: '/reviews',
+    element: <Reviews />,
+  },
+  {
+    path: '/contacts',
+    element: <Contacts />,
+  },
+  {
+    path: '/about',
+    element: <About />,
+  },
+  {
+    path: '*',
+    element: <NotFound />,
+  }
+];
+
+export default routes;

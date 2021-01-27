@@ -3,6 +3,7 @@
   "name": "@modules/about",
   "version": "1.0.0",
   "main": "./lib/index.js",
+  "type": "module",
   "scripts": {
     "build": "cross-env NODE_ENV=production babel ./src --out-dir ./lib --copy-files",
     "start:dev": "cross-env NODE_ENV=development babel ./src --out-dir ./lib --copy-files --watch"
@@ -10,12 +11,12 @@
   "dependencies": {
     "@ui.packages/kit": "1.0.0",
     "@ui.packages/themes": "1.0.0",
-    "react": "17.0.1",
-    "cross-env": "7.0.3"
+    "cross-env": "7.0.3",
+    "react": "17.0.1"
   },
   "devDependencies": {
-    "@babel/cli": "7.12.8",
-    "@babel/core": "7.12.9",
+    "@babel/cli": "7.12.10",
+    "@babel/core": "7.12.10",
     "cross-env": "7.0.3",
     "prop-types": "15.7.2",
     "react-scripts": "4.0.1",
@@ -23,7 +24,12 @@
   },
   "babel": {
     "presets": [
-      [ "react-app", { "absoluteRuntime": false } ]
+      [
+        "react-app",
+        {
+          "absoluteRuntime": false
+        }
+      ]
     ]
   }
 }
