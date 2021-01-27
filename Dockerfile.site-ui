@@ -6,6 +6,8 @@ FROM node:15.6.0-alpine as ui
 
 # SET CONFIGS
 RUN apk update && apk add bash
+
+RUN npm install -g npm
 RUN npm config set package-lock false
 #RUN npm i yarn -g --yes
 
