@@ -25,7 +25,7 @@ COPY ./build-ui.sh                ./
 RUN yarn
 
 RUN chmod +x ./build-ui.sh
-RUN ./build-admin-packages.sh
+RUN ./build-ui.sh
 
 
 # BUILD SITE
