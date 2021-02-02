@@ -1,6 +1,6 @@
 
 import { BreadcrumbLink, Breadcrumbs, BreadcrumbTitle, PartitionLayout } from "@ui.packages/kit";
-import { Title, H3, P, UL, LI } from "@ui.packages/kit";
+import { Header, Text, UL, LI } from "@ui.packages/kit";
 
 import React, { useEffect } from 'react';
 
@@ -30,12 +30,12 @@ export default function SafetyPage() {
             <BreadcrumbTitle title="Безопасность труда" />
           </Breadcrumbs>
         </div>
-        <Title>Безопасность труда</Title>
+        <Header>Безопасность труда</Header>
       </div>
 
       <div className={styles['content']}>
         <div className={styles['block']}>
-          <H3>Преимущества</H3>
+          <Header level={2}>Преимущества</Header>
           <UL>
             <LI>Возможность делегировать свои риски;</LI>
             <LI>Гарантия выполнения указанного в договоре объема работ;</LI>
@@ -48,7 +48,7 @@ export default function SafetyPage() {
           </UL>
         </div>
         <div className={styles['block']}>
-          <H3>Дорожная карта</H3>
+          <Header level={2}>Дорожная карта</Header>
           <UL>
             <LI>Заключение договора оказания услуг и его оплата;</LI>
             <LI>Согласование места, даты и времени осмотра;</LI>
@@ -60,9 +60,9 @@ export default function SafetyPage() {
           </UL>
         </div>
         <div className={styles['block']}>
-          <H3>Направления</H3>
+          <Header level={2}>Направления</Header>
 
-          <P><b>Охрана труда</b></P>
+          <Text type={Text.TYPE_PARAGRAPH}><b>Охрана труда</b></Text>
           <UL>
             <LI>Подготовка полного пакета документов;</LI>
             <LI>Обучение по охране труда;</LI>
@@ -74,7 +74,7 @@ export default function SafetyPage() {
             <LI>Специальные цены на товары по охране труда;</LI>
           </UL>
 
-          <P><b>Пожарная безопасность</b></P>
+          <Text type={Text.TYPE_PARAGRAPH}><b>Пожарная безопасность</b></Text>
           <UL>
             <LI>Подготовка полного пакета документов;</LI>
             <LI>Обучение по пожарной безопасности;</LI>
@@ -91,7 +91,7 @@ export default function SafetyPage() {
             <LI>Расчет пожарного риска;</LI>
           </UL>
 
-          <P><b>Экологическая безопасность</b></P>
+          <Text type={Text.TYPE_PARAGRAPH}><b>Экологическая безопасность</b></Text>
           <UL>
             <LI>Подготовка полного пакета документов;</LI>
             <LI>Обучение по экологической безопасности;</LI>
@@ -99,14 +99,14 @@ export default function SafetyPage() {
             <LI>Подготовка всех видов ежегодной отчетности;</LI>
           </UL>
 
-          <P><b>Электробезопасность</b></P>
+          <Text type={Text.TYPE_PARAGRAPH}><b>Электробезопасность</b></Text>
           <UL>
             <LI>Подготовка полного пакета документов;</LI>
             <LI>Обучение по электробезопасности на все группы;</LI>
             <LI>Измерения и испытания электрооборудования и электроустановок зданий и сооружений по лицензии Ростехнадзора и Республике Крым и г. Севастополь;</LI>
           </UL>
 
-          <P><b>Антитеррористическая безопасность</b></P>
+          <Text type={Text.TYPE_PARAGRAPH}><b>Антитеррористическая безопасность</b></Text>
           <UL>
             <LI>Подготовка полного пакета документов;</LI>
             <LI>Обучение по антитеррористической безопасности;</LI>
@@ -115,14 +115,14 @@ export default function SafetyPage() {
             <LI>Плакаты и стенды по противодействию терроризму;</LI>
           </UL>
 
-          <P><b>Гражданская оборона и чрезвычайные ситуации</b></P>
+          <Text type={Text.TYPE_PARAGRAPH}><b>Гражданская оборона и чрезвычайные ситуации</b></Text>
           <UL>
             <LI>Подготовка полного пакета документов;</LI>
             <LI>Обучение руководителей и специалистов по Гражданской Обороне;</LI>
             <LI>Стенды и плакаты по гражданской Обороне;</LI>
           </UL>
 
-          <P><b>Промышленная безопасность</b></P>
+          <Text type={Text.TYPE_PARAGRAPH}><b>Промышленная безопасность</b></Text>
           <UL>
             <LI>Подготовка полного пакета документов;</LI>
             <LI>Укомплектование ОПО персоналам соответствующей квалификации;</LI>

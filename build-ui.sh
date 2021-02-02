@@ -19,6 +19,10 @@ cd ../../modules || return
 
 echo '[--- About ---]'
 cd  ./About && npx yarn build
+echo '[--- Audit ---]'
+cd ../Audit && npx yarn build
+echo '[--- Business ---]'
+cd ../Business && npx yarn build
 echo '[--- Bookkeeping ---]'
 cd ../Bookkeeping && npx yarn build
 echo '[--- Contacts ---]'

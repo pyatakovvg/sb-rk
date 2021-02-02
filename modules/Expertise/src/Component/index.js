@@ -1,6 +1,6 @@
 
 import { BreadcrumbLink, Breadcrumbs, BreadcrumbTitle, PartitionLayout } from '@ui.packages/kit';
-import { Title, H3, P, UL, LI, Link } from '@ui.packages/kit';
+import { Header, Text, UL, LI, Link } from '@ui.packages/kit';
 
 import React, { useEffect } from 'react';
 
@@ -30,10 +30,10 @@ export default function ExpertisePage() {
             <BreadcrumbTitle title="Независимая оценка и экспертиза" />
           </Breadcrumbs>
         </div>
-        <Title>Независимая оценка и экспертиза</Title>
+        <Header>Независимая оценка и экспертиза</Header>
       </div>
 
-      <H3>Основные направления независимой оценки:</H3>
+      <Header level={2}>Основные направления независимой оценки:</Header>
 
       <UL>
         <LI><Link href="https://expo-crm.ru/appraisal/1.html">Оценка недвижимости</Link></LI>
@@ -53,9 +53,9 @@ export default function ExpertisePage() {
         <LI><Link href="https://expo-crm.ru/appraisal/17.html">Оспаривание кадастровой стоимости</Link></LI>
       </UL>
 
-      <H3>Основные направления независимой экспертизы:</H3>
+      <Header level={2}>Основные направления независимой экспертизы:</Header>
 
-      <P>Автотехническая экспертиза</P>
+      <Text type={Text.TYPE_PARAGRAPH}>Автотехническая экспертиза</Text>
 
       <UL>
         <LI><Link href="https://expo-crm.ru/expert/160.html">Экспертиза качества ремонта автомобиля</Link></LI>
@@ -66,7 +66,7 @@ export default function ExpertisePage() {
         <LI><Link href="https://expo-crm.ru/expert/86.html">Идентификация автомототранспортного средства</Link></LI>
       </UL>
 
-      <P>Строительно-техническая экспертиза</P>
+      <Text type={Text.TYPE_PARAGRAPH}>Строительно-техническая экспертиза</Text>
 
       <UL>
         <LI><Link href="https://expo-crm.ru/expert/123.html">Определение порядка пользования недвижимостью</Link></LI>
@@ -87,9 +87,9 @@ export default function ExpertisePage() {
         <LI><Link href="https://expo-crm.ru/expert/178.html">Дачная амнистия в Крыму</Link></LI>
       </UL>
 
-      <H3>Судебная экспертиза:</H3>
+      <Header level={2}>Судебная экспертиза:</Header>
 
-      <P>Этапы проведения независимой оценки и экспертизы:</P>
+      <Text type={Text.TYPE_PARAGRAPH}>Этапы проведения независимой оценки и экспертизы:</Text>
 
       <UL>
         <LI>Заключение договора оказания услуг и его оплата;</LI>

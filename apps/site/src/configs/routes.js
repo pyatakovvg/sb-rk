@@ -3,6 +3,7 @@ import React from 'react';
 
 import Home from '@modules/home';
 import About from '@modules/about';
+import Business from '@modules/business';
 import Services from '@modules/services';
 import Legal from '@modules/legal';
 import Bookkeeping from '@modules/bookkeeping';
@@ -13,6 +14,7 @@ import Safety from '@modules/safety';
 import Partners from '@modules/partners';
 import Reviews from '@modules/reviews';
 import Contacts from '@modules/contacts';
+import Audit from '@modules/audit';
 
 import NotFound from '@modules/not-found';
 
@@ -28,6 +30,10 @@ const routes = [
       {
         path: '/',
         element: <Services />,
+      },
+      {
+        path: '/business',
+        element: <Business />,
       },
       {
         path: '/legal',
@@ -52,6 +58,10 @@ const routes = [
       {
         path: '/safety',
         element: <Safety />,
+      },
+      {
+        path: '/audit',
+        element: <Audit />,
       }
     ]
   },

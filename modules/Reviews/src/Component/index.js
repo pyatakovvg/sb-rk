@@ -1,6 +1,6 @@
 
 import { BreadcrumbLink, Breadcrumbs, BreadcrumbTitle, PartitionLayout } from '@ui.packages/kit';
-import { Title, Image } from '@ui.packages/kit';
+import { Header, Image } from '@ui.packages/kit';
 
 import React, { useEffect } from 'react';
 
@@ -27,7 +27,7 @@ export default function ReviewsPage() {
             <BreadcrumbTitle title="Отзывы" />
           </Breadcrumbs>
         </div>
-        <Title>Отзывы клиентов</Title>
+        <Header>Отзывы клиентов</Header>
       </div>
       <div className={styles['row']}>
         <div className={styles['col']}>

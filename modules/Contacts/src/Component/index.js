@@ -28,16 +28,13 @@ export default function ContactsPage() {
         <Title>Контакты</Title>
       </div>
       <div className={styles['content']}>
-        <div className={styles['map']}>
-          <MyMap />
-        </div>
         <div className={styles['info']}>
           <div className={styles['line']}>
             <div className={styles['asign']}>
               <span className={cn(styles['icon'], 'fas fa-map-marker-alt')} />
             </div>
             <div className={styles['article']}>
-              <div className={styles['text']}>Адрес: 295047, Республика Крым, г. Симферополь, ул. Узловая, 10, офис 32</div>
+              <div className={styles['text']}>Адрес: 295047, Республика Крым, г.&nbsp;Симферополь, ул.&nbsp;Узловая, 10, офис 32</div>
             </div>
           </div>
           <div className={styles['line']}>
@@ -56,6 +53,9 @@ export default function ContactsPage() {
               <div className={styles['text']}>sb-rk@mail.ru</div>
             </div>
           </div>
+        </div>
+        <div className={styles['map']}>
+          <MyMap />
         </div>
       </div>
     </PartitionLayout>

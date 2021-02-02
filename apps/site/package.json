@@ -9,7 +9,9 @@
     "start:server:dev": "nodemon --exec babel-node -r dotenv/config --experimental-module -- ./server/index.js dotenv_config_path=./.env.development"
   },
   "dependencies": {
+    "@modules/business": "1.0.0",
     "@modules/about": "1.0.0",
+    "@modules/audit": "1.0.0",
     "@modules/bookkeeping": "1.0.0",
     "@modules/contacts": "1.0.0",
     "@modules/criminal": "1.0.0",
