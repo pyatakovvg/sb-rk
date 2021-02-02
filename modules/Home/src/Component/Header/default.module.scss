@@ -9,11 +9,11 @@
   flex-direction: column;
   flex: 0 0 auto;
   height: 790px;
-  background-image: linear-gradient(180deg, rgba(black, .4), rgba(black, 1)), url('./background.jpg');
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: cover, cover;
-  background-attachment: scroll, fixed;
+  background-image: url("./noice.png"), linear-gradient(180deg, rgba(black, .4), rgba(black, 1)), url('./background.jpg');
+  background-repeat: repeat, no-repeat, no-repeat;
+  background-position: center center, top center, top center;
+  background-size: auto, cover, cover;
+  background-attachment: fixed, fixed, fixed;
   justify-content: flex-end;
   padding: 0 40px 80px;
   box-sizing: border-box;

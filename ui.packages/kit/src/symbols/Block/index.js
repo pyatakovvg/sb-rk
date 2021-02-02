@@ -2,16 +2,17 @@
 import { Header, Text } from '@ui.packages/kit';
 
 import React from 'react';
+import types from 'prop-types';
 
 import cn from 'classnames';
 import styles from './default.module.scss';
 
 
-export default function Block({ title, content }) {
+function Block({ icon, title, content }) {
   return (
     <div className={styles['wrapper']}>
       <div className={styles['logo']}>
-        <span className={cn(styles['icon'], 'far fa-arrow-alt-circle-right')} />
+        <span className={cn(styles['icon'], icon)} />
       </div>
       <div className={styles['content']}>
         {title && (
@@ -28,3 +29,17 @@ export default function Block({ title, content }) {
     </div>
   );
 }
+
+Block.propTypes = {
+  icon: types.string,
+  title: types.string,
+  content: types.string,
+};
+
+Block.defaultProps = {
+  icon: 'far fa-arrow-alt-circle-right',
+  title: null,
+  content: null,
+};
+
+export default Block;

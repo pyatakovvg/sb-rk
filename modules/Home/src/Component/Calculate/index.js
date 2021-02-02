@@ -1,5 +1,5 @@
 
-import { Title } from '@ui.packages/kit';
+import { Header } from '@ui.packages/kit';
 
 import React from 'react';
 
@@ -8,11 +8,11 @@ import Form from './Form';
 import styles from "./default.module.scss";
 
 
-export default function Header() {
+export default function Calculate() {
   return (
     <section className={styles['wrapper']}>
       <div className={styles['header']}>
-        <Title>Расчет услуги</Title>
+        <Header>Расчет услуги</Header>
       </div>
       <div className={styles['content']}>
         <Form onSubmit={(data) => console.log(data)} />

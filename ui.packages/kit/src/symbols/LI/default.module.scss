@@ -2,28 +2,25 @@
 @import "~@ui.packages/themes";
 
 
-:global {
+.li {
 
-  .li {
+  display: block;
+  font-weight: 300;
+  font-size: 16px;
+  color: $coal-dark;
+  letter-spacing: .5px;
+  padding: 0 0 0 15px;
+  line-height: 1.4;
+}
 
-    display: block;
-    font-weight: 300;
-    font-size: 18px;
-    color: $coal-dark;
-    letter-spacing: .5px;
-    padding: 0 0 0 15px;
-    line-height: 1.6;
-  }
+.li:before {
 
-  .li:before {
+  display: inline-block;
+  content: '-';
+  margin: 0 7px 0 -15px;
+}
 
-    display: inline-block;
-    content: '-';
-    margin: 0 7px 0 -15px;
-  }
+.li + .li {
 
-  .li + .li {
-
-    margin: 15px 0 0;
-  }
+  margin: 10px 0 0;
 }

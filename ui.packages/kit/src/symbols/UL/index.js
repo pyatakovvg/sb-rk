@@ -1,14 +1,13 @@
 
 import React from 'react';
+import types from "prop-types";
 
 import cn from 'classnames';
-import './default.module.scss';
-import types from "prop-types";
-import Li from "../LI";
+import styles from './default.module.scss';
 
 
 export default function Ul({ className, children }) {
-  const headerClassName = cn('ul', className);
+  const headerClassName = cn(styles['ul'], className);
   return (
     <ul className={headerClassName}>{
       React.Children.map(children, (child) => (

@@ -9,16 +9,12 @@
     "start:server:dev": "nodemon --exec babel-node -r dotenv/config --experimental-module -- ./server/index.js dotenv_config_path=./.env.development"
   },
   "dependencies": {
-    "@reduxjs/toolkit": "1.5.0",
-    "@ui.packages/contexts": "1.0.0",
-    "@ui.packages/kit": "1.0.0",
-    "@ui.packages/themes": "1.0.0",
-    "@modules/home": "1.0.0",
     "@modules/about": "1.0.0",
     "@modules/bookkeeping": "1.0.0",
     "@modules/contacts": "1.0.0",
     "@modules/criminal": "1.0.0",
     "@modules/expertise": "1.0.0",
+    "@modules/home": "1.0.0",
     "@modules/legal": "1.0.0",
     "@modules/not-found": "1.0.0",
     "@modules/partners": "1.0.0",
@@ -26,8 +22,12 @@
     "@modules/reviews": "1.0.0",
     "@modules/safety": "1.0.0",
     "@modules/services": "1.0.0",
-    "koa": "2.13.0",
+    "@reduxjs/toolkit": "1.5.0",
+    "@ui.packages/contexts": "1.0.0",
+    "@ui.packages/kit": "1.0.0",
+    "@ui.packages/themes": "1.0.0",
     "classnames": "2.2.6",
+    "cross-env": "7.0.3",
     "history": "5.0.0",
     "prop-types": "15.7.2",
     "react": "17.0.1",
@@ -37,20 +37,9 @@
     "redux-form": "8.3.7"
   },
   "devDependencies": {
-    "@babel/cli": "7.12.10",
-    "@babel/core": "7.12.10",
-    "@babel/node": "7.12.10",
-    "@babel/runtime": "7.12.5",
-    "@babel/preset-env": "7.12.11",
-    "@babel/preset-react": "7.12.10",
-    "@babel/plugin-transform-runtime": "7.12.10",
-    "@babel/plugin-syntax-dynamic-import": "7.8.3",
-    "@babel/plugin-transform-modules-commonjs": "7.12.1",
-    "@babel/plugin-transform-async-to-generator": "7.12.1",
-    "cross-env": "7.0.3",
+    "nodemon": "2.0.7",
     "react-scripts": "4.0.1",
-    "sass": "1.30.0",
-    "nodemon": "2.0.6"
+    "sass": "1.32.5"
   },
   "browserslist": [
     ">0.2%",
@@ -63,22 +52,33 @@
   },
   "babel": {
     "presets": [
-      ["@babel/preset-env", {
-        "useBuiltIns": "entry",
-        "corejs": 3,
-        "modules": false,
-        "exclude": ["transform-typeof-symbol"]
-      }],
+      [
+        "@babel/preset-env",
+        {
+          "useBuiltIns": "entry",
+          "corejs": 3,
+          "modules": false,
+          "exclude": [
+            "transform-typeof-symbol"
+          ]
+        }
+      ],
       "@babel/preset-react"
     ],
     "plugins": [
-      ["@babel/plugin-transform-modules-commonjs", {
-        "onlyExports": true,
-        "synchronousImport": true
-      }],
-      ["@babel/plugin-transform-runtime", {
-        "corejs": 3
-      }]
+      [
+        "@babel/plugin-transform-modules-commonjs",
+        {
+          "onlyExports": true,
+          "synchronousImport": true
+        }
+      ],
+      [
+        "@babel/plugin-transform-runtime",
+        {
+          "corejs": 3
+        }
+      ]
     ]
   }
 }

@@ -5,15 +5,15 @@
 .wrapper {
 
   display: block;
-  padding: 90px 0 20px;
-  background-color: $white;
+  padding: 90px 0 120px;
+  background: $white url("./noice.png");
 }
 
 .header {
 
   display: block;
   text-align: center;
-  margin: 0 0 120px;
+  margin: 0 0 90px;
 }
 
 .content {
@@ -22,7 +22,9 @@
   flex-direction: row;
   flex-wrap: wrap;
   margin: 0 auto;
-  width: 1200px;
+  width: 1120px;
+  padding: 0 100px;
+  box-sizing: border-box;
 }
 
 .column {
@@ -30,5 +32,24 @@
   display: flex;
   flex-direction: column;
   flex: 1 0 50%;
-  background: red;
+}
+
+.block {
+
+  display: block;
+
+  & + & {
+    margin: 40px 0 0;
+  }
+}
+
+.title {
+
+  display: block;
+}
+
+.list {
+
+  display: block;
+  margin: 20px 0 0;
 }

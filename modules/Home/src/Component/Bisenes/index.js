@@ -13,32 +13,27 @@ export default function Description() {
         <Header>Бизнес-консультирование</Header>
       </header>
       <article className={styles['content']}>
-        <div className={styles['columns']}>
-          <div className={styles['column']}>
-            <Block
-              title="Открыие бизнеса"
-            />
+        <div className={styles['row']}>
+          <div className={styles['col']}>
+            <Block title="Открыие бизнеса" />
           </div>
-          <div className={styles['column']}>
-            <Block
-              title="Развитие бизнеса"
-            />
+          <div className={styles['col']}>
+            <Block title="Развитие бизнеса" />
           </div>
-          <div className={styles['column']}>
-            <Block
-              title="Оптимизация затрат и издержек"
-            />
+        </div>
+        <div className={styles['row']}>
+          <div className={styles['col']}>
+            <Block title="Оптимизация затрат и издержек" />
           </div>
-          <div className={styles['column']}>
-            <Block
-              title="Увеличение прибыли"
-            />
+          <div className={styles['col']}>
+            <Block title="Увеличение прибыли" />
           </div>
-          <div className={styles['column']}>
-            <Block
-              title="Продвижение бизнеса"
-            />
+        </div>
+        <div className={styles['row']}>
+          <div className={styles['col']}>
+            <Block title="Продвижение бизнеса" />
           </div>
+          <div className={styles['col']} />
         </div>
       </article>
     </section>

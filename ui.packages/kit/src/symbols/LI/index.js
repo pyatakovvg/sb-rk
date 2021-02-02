@@ -3,11 +3,11 @@ import React from 'react';
 import types from 'prop-types';
 
 import cn from 'classnames';
-import './default.module.scss';
+import styles from './default.module.scss';
 
 
 export default function Li({ className, children }) {
-  const listClassName = cn('li', className);
+  const listClassName = cn(styles['li'], className);
   return (
     <li className={listClassName}>{ children }</li>
   );

@@ -5,7 +5,28 @@
 .header {
 
   font-weight: 600;
-  font-size: 36px;
+  font-size: 28px;
   letter-spacing: 1px;
+  text-transform: uppercase;
   color: $black;
+  vertical-align: middle;
+
+  &:before,
+  &:after {
+
+    display: inline-block;
+    content: '';
+    width: 80px;
+    height: 3px;
+    background: $information;
+    vertical-align: middle;
+  }
+
+  &:before {
+    margin: 0 25px 0 0;
+  }
+
+  &:after {
+    margin: 0 0 0 25px;
+  }
 }

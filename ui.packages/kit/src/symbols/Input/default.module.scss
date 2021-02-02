@@ -15,9 +15,9 @@
 .label {
 
   display: block;
-  font-size: 14px;
+  font-size: 12px;
   color: $coal-dark;
-  padding: 0 0 8px 13px;
+  padding: 0 0 6px 15px;
   letter-spacing: .2px;
 
   &--require:after {
@@ -44,9 +44,10 @@
   outline: none;
   width: 100%;
   box-sizing: border-box;
-  padding: 10px 12px;
-  font-weight: 300;
-  font-size: 16px;
+  padding: 12px 14px;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: .5px;
   color: $coal-dark;
 }
 

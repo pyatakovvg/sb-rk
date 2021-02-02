@@ -1,5 +1,5 @@
 
-import { Title } from '@ui.packages/kit';
+import { Header, Block } from '@ui.packages/kit';
 
 import React from 'react';
 
@@ -10,26 +10,32 @@ export default function Description() {
   return (
     <section className={styles['wrapper']}>
       <header className={styles['header']}>
-        <Title>Независимая оценка и экспертиза</Title>
+        <Header>Независимая оценка и экспертиза</Header>
       </header>
       <article className={styles['content']}>
-        <div className={styles['column']}>
-          <h2>Независимая оценка недвижимого имущества</h2>
+        <div className={styles['row']}>
+          <div className={styles['col']}>
+            <Block title="Независимая оценка недвижимого имущества" />
+          </div>
+          <div className={styles['col']}>
+            <Block title="Независимая оценка движимого имущества" />
+          </div>
         </div>
-        <div className={styles['column']}>
-          <h2>Независимая оценка движимого имущества</h2>
+        <div className={styles['row']}>
+          <div className={styles['col']}>
+            <Block title="Оспаривание кадастровой стоимости" />
+          </div>
+          <div className={styles['col']}>
+            <Block title="Автотехническая экспертиза" />
+          </div>
         </div>
-        <div className={styles['column']}>
-          <h2>Оспаривание кадастровой стоимости</h2>
-        </div>
-        <div className={styles['column']}>
-          <h2>Автотехническая экспертиза</h2>
-        </div>
-        <div className={styles['column']}>
-          <h2>Строительно-техническая экспертиза</h2>
-        </div>
-        <div className={styles['column']}>
-          <h2>Судебная экспертиза</h2>
+        <div className={styles['row']}>
+          <div className={styles['col']}>
+            <Block title="Строительно-техническая экспертиза" />
+          </div>
+          <div className={styles['col']}>
+            <Block title="Судебная экспертиза" />
+          </div>
         </div>
       </article>
     </section>

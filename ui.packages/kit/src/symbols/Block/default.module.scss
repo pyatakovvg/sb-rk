@@ -9,7 +9,6 @@
   flex: 1 0;
   background: rgba($white, .6);
   padding: 30px;
-  margin: 0 40px 0 0;
   border-bottom: 2px solid $pale-lilac;
   border-right: 2px solid $pale-lilac;
 }
@@ -26,7 +25,9 @@
 
   display: inline-block;
   font-size: 40px;
+  width: 40px;
   color: $success;
+  text-align: center;
 }
 
 .content {

@@ -30,12 +30,12 @@ export default function AboutPage() {
       <article className={styles['wrapper']}>
         <Header />
         <Description />
-        <Bisenes />
         <Bookkeeping />
         <Legal />
         <Expertise />
         <Safety />
         <Audit />
+        <Bisenes />
         {/*<Services />*/}
         {/*<Other />*/}
         <Calculate />

@@ -5,30 +5,46 @@
 .wrapper {
 
   display: block;
-  padding: 90px 0 20px;
-  background-color: $white;
+  padding: 90px 0 60px;
+  background-color: $pale-grey;
+  background-image: url("./noice.png");
 }
 
 .header {
 
   display: block;
   text-align: center;
-  margin: 0 0 120px;
+  margin: 0 0 90px;
 }
 
 .content {
 
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction: column;
   margin: 0 auto;
   width: 1200px;
 }
 
-.column {
+.row {
+
+  display: flex;
+  flex-direction: row;
+  flex: 1 0;
+
+  & + & {
+
+    margin: 30px 0 0;
+  }
+}
+
+.col {
 
   display: flex;
   flex-direction: column;
-  flex: 1 0 50%;
-  background: red;
+  flex: 1 0;
+
+  & + & {
+
+    margin: 0 0 0 30px;
+  }
 }

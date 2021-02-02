@@ -14,3 +14,47 @@
   display: block;
   margin: 0 0 20px;
 }
+
+.content {
+
+  display: block;
+}
+
+.column {
+
+  display: block;
+  column-width: 200px;
+  column-count: 2;
+  column-gap: 60px;
+}
+
+.header-1 {
+
+  display: block;
+  margin: 80px 0 50px;
+  text-align: center;
+}
+
+.row {
+
+  display: flex;
+  flex-direction: row;
+  flex: 1 0;
+
+  & + & {
+
+    margin: 30px 0 0;
+  }
+}
+
+.col {
+
+  display: flex;
+  flex-direction: column;
+  flex: 1 0;
+
+  & + & {
+
+    margin: 0 0 0 30px;
+  }
+}
